@@ -280,6 +280,31 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 4608261731869910644}
     m_Modifications:
+    - target: {fileID: 1966848941769318176, guid: ae75179165c8e854fa9af578948a1009,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.2203
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966848941769318176, guid: ae75179165c8e854fa9af578948a1009,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966848941769318176, guid: ae75179165c8e854fa9af578948a1009,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966848941769318176, guid: ae75179165c8e854fa9af578948a1009,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966848941769318176, guid: ae75179165c8e854fa9af578948a1009,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 2410271734309294575, guid: ae75179165c8e854fa9af578948a1009,
         type: 3}
       propertyPath: m_Name
@@ -425,8 +450,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.010728074, y: 0.5121001, z: 0.015409781}
-  m_Center: {x: 0.00030149054, y: -0.73566747, z: 0.0016469887}
+  m_Size: {x: 0.010728074, y: 0.54332125, z: 0.015409781}
+  m_Center: {x: 0.00030149054, y: 2.9568276, z: 0.001647869}
 --- !u!4 &6832820751772768063 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3042412393605614421, guid: ae75179165c8e854fa9af578948a1009,
