@@ -6,7 +6,7 @@ public class MovingTarget : MonoBehaviour, IHittable
 {
     private Rigidbody rb;
     private bool stopped = false;
-
+ public int scoreOnHit = 0; 
     private Vector3 nextposition;
     private Vector3 originPosition;
 
@@ -42,6 +42,11 @@ public class MovingTarget : MonoBehaviour, IHittable
     public void GetHit()
     {
         health--;
+         GetPoint getPointScript = FindObjectOfType<GetPoint>();
+            if (getPointScript != null)
+            {
+                getPointScript.AddPoints(scoreOnHit);
+            }
         if(health <= 0)
         {
             rb.isKinematic = false;
