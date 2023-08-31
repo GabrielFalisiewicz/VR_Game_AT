@@ -14,6 +14,7 @@ public class GetPoint : MonoBehaviour
     // Start is called before the first frame update
    public void resetscore(){
     score = 0;
+    UpdatePointsText();
    }
    public void AddPoints(int amount){
         score += amount;
