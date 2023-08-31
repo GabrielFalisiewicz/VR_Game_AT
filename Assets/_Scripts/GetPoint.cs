@@ -9,13 +9,22 @@ public class GetPoint : MonoBehaviour
     void Start(){
         coins = GetComponent<TMP_Text>();
         UpdatePointsText();
-    }
-    
+    } 
     // Start is called before the first frame update
    public void resetscore(){
     score = 0;
-    UpdatePointsText();
-   }
+           UpdatePointsText();
+        DestroyObjectsWithTag("StickArrow");
+    }
+
+    void DestroyObjectsWithTag(string tag)
+    {
+        GameObject[] objects = GameObject.FindGameObjectsWithTag(tag);
+        foreach (GameObject obj in objects)
+        {
+            Destroy(obj);
+        }
+    }
    public void AddPoints(int amount){
         score += amount;
         UpdatePointsText();
@@ -23,4 +32,6 @@ public class GetPoint : MonoBehaviour
    void UpdatePointsText(){
         coins.text = "Twoj wynik: " + score.ToString();
    }
+   
+   
 }
