@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Arrow
+  - StickArrow
+  - Can
+  - Pin
   layers:
   - Default
   - TransparentFX
