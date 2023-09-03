@@ -8,8 +8,6 @@ TagManager:
   - StickArrow
   - Can
   - Pin
-  - Balling
-  - hand
   layers:
   - Default
   - TransparentFX
