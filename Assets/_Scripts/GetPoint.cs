@@ -7,7 +7,7 @@ public class GetPoint : MonoBehaviour
 {
     public int score = 0;
     public TMP_Text coins;
-    public AttemptsCounter attemptsCounter; // Referencja do skryptu AttemptsCounter Nie TYKAC
+    public AttemptsCounter attemptsCounter; // Referencja do skryptu AttemptsCounter
 
     void Start()
     {
@@ -35,7 +35,7 @@ public class GetPoint : MonoBehaviour
 
     public void AddPoints(int amount)
     {
-        if (attemptsCounter.DecreaseAttempt())
+        if (attemptsCounter.DecreaseAttempt()) // Sprawdź, czy nadal są dostępne podejścia
         {
             score += amount;
             UpdatePointsText();
