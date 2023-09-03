@@ -7,7 +7,7 @@ public class GetPoint : MonoBehaviour
 {
     public int score = 0;
     public TMP_Text coins;
-    public AttemptsCounter attemptsCounter; // Referencja do skryptu AttemptsCounter
+    public AttemptsCounter attemptsCounter; // Referencja do skryptu AttemptsCounter NIE TYKAC
 
     void Start()
     {
@@ -17,10 +17,10 @@ public class GetPoint : MonoBehaviour
 
     public void resetscore()
     {
-        score = 0;
-        attemptsCounter.CurrentAttempts = attemptsCounter.maxAttempts;
-        attemptsCounter.UpdateAttemptsText();
+         score = 0;
+        attemptsCounter.CurrentAttempts = attemptsCounter.maxAttempts; 
         UpdatePointsText();
+        attemptsCounter.UpdateAttemptsText();
         DestroyObjectsWithTag("StickArrow");
     }
 
@@ -35,7 +35,7 @@ public class GetPoint : MonoBehaviour
 
     public void AddPoints(int amount)
     {
-        if (attemptsCounter.DecreaseAttempt()) // Sprawdź, czy nadal są dostępne podejścia
+        if (attemptsCounter.DecreaseAttempt())
         {
             score += amount;
             UpdatePointsText();

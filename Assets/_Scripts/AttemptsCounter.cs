@@ -5,11 +5,10 @@ using TMPro;
 
 public class AttemptsCounter : MonoBehaviour
 {
-    public int maxAttempts = 5; // Początkowa ilość podejść
-    private int currentAttempts; // Aktualna ilość podejść
+    public int maxAttempts = 5;
+    private int currentAttempts;
     public TMP_Text attemptsText;
 
-    // Właściwość do dostępu i modyfikacji currentAttempts
     public int CurrentAttempts
     {
         get { return currentAttempts; }
@@ -27,19 +26,19 @@ public class AttemptsCounter : MonoBehaviour
     {
         if (currentAttempts > 0)
         {
-            currentAttempts--; // Odejmij jedno podejście
+            currentAttempts--;
             UpdateAttemptsText();
 
             if (currentAttempts <= 0)
             {
                 currentAttempts = 0;
             }
-            return true; // Zwróć true, jeśli nadal są dostępne podejścia
+            return true;
         }
-        return false; // Zwróć false, jeśli nie ma już dostępnych podejść
+        return false;
     }
 
-    public void UpdateAttemptsText()
+ public   void UpdateAttemptsText()
     {
         attemptsText.text = "Podejścia: " + currentAttempts.ToString();
     }
