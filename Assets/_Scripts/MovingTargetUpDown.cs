@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MovingTargetUpDown : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class MovingTargetUpDown : MonoBehaviour
     [SerializeField] private float speed = 1f;
 
     private bool movingUp = true;
+    private bool stopMoving = false;
+
+    public event System.Action OnCollision;
 
     private void Start()
     {
@@ -20,7 +24,10 @@ public class MovingTargetUpDown : MonoBehaviour
 
     private void Update()
     {
-        MoveUpDown();
+        if (!stopMoving)
+        {
+            MoveUpDown();
+        }
     }
 
     private void MoveUpDown()
@@ -34,6 +41,7 @@ public class MovingTargetUpDown : MonoBehaviour
             {
                 newY = maxHeight;
                 movingUp = false;
+                OnCollision?.Invoke();
             }
         }
         else
@@ -47,5 +55,15 @@ public class MovingTargetUpDown : MonoBehaviour
         }
 
         transform.position = new Vector3(startPosition.x, newY, startPosition.z);
+    }
+
+    public void StopMoving()
+    {
+        stopMoving = true;
+    }
+
+    public void ResumeMoving()
+    {
+        stopMoving = false;
     }
 }

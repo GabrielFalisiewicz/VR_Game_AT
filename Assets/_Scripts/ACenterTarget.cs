@@ -10,15 +10,6 @@ public class ACenterTarget : MonoBehaviour, IHittable
     [SerializeField]
     private AudioSource audioSource;
 
-   
-  
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Arrow") == false)
-        {
-            audioSource.Play();
-        }
-    }
 
     public void GetHit()
     {
@@ -27,6 +18,8 @@ public class ACenterTarget : MonoBehaviour, IHittable
             if (getPointScript != null)
             {
                 getPointScript.AddPoints(scoreOnHit);
+                audioSource.Play();
+                
             }
        
     }
