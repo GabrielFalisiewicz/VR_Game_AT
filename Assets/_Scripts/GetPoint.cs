@@ -7,9 +7,12 @@ public class GetPoint : MonoBehaviour
 {
     public int score = 0;
     public TMP_Text coins;
-    public AttemptsCounter attemptsCounter; // Referencja do skryptu AttemptsCounter NIE TYKAC
-
+    public AttemptsCounter attemptsCounter;
     public MovingTargetUpDown movingTarget;
+
+    public AudioSource music;
+
+    private bool musicPlayed = false;
 
     void Start()
     {
@@ -19,11 +22,12 @@ public class GetPoint : MonoBehaviour
 
     public void resetscore()
     {
-         score = 0;
+        score = 0;
         attemptsCounter.CurrentAttempts = attemptsCounter.maxAttempts; 
         UpdatePointsText();
         attemptsCounter.UpdateAttemptsText();
         DestroyObjectsWithTag("StickArrow");
+        musicPlayed = false;
     }
 
     void DestroyObjectsWithTag(string tag)
@@ -41,6 +45,15 @@ public class GetPoint : MonoBehaviour
         {
             score += amount;
             UpdatePointsText();
+
+            
+            if (score >= 1000 && !musicPlayed)
+            {
+                
+                music.Play();
+                musicPlayed = true;
+            }
+
             if (movingTarget != null)
             {
                 movingTarget.ResumeMoving();
