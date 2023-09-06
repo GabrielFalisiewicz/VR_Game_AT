@@ -8,6 +8,14 @@ TagManager:
   - StickArrow
   - Can
   - Pin
+  - Balling
+  - Pistol
+  - Bow2
+  - Hammers
+  - Hammer
+  - Bow
+  - RightController
+  - LeftController
   layers:
   - Default
   - TransparentFX

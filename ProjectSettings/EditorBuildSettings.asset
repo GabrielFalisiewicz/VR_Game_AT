@@ -12,6 +12,8 @@ EditorBuildSettings:
     path: Assets/Free Pack Wooden Planks/New Scene.unity
     guid: 8572cdaca7726a24ca81fa4bf44e1bb3
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: aa94f625f915d4f48b9f328c18520b65,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d0a00d3bedd23ac4e822693611b102a9,
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 80cb9c8bf6463444086af83ee350c1bc,
