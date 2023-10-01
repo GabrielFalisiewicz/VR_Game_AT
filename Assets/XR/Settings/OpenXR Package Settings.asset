@@ -117,6 +117,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-5217259610097694196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +144,8 @@ MonoBehaviour:
 >>>>>>> parent of 62d1f98 (Stabilna Wersja na Pokazy)
 =======
 >>>>>>> parent of 62d1f98 (Stabilna Wersja na Pokazy)
+=======
+>>>>>>> parent of 62d1f98 (Stabilna Wersja na Pokazy)
 --- !u!114 &-3882370980513696984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +166,7 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -224,6 +228,8 @@ MonoBehaviour:
   features: []
   m_renderMode: 1
   m_depthSubmissionMode: 0
+=======
+>>>>>>> parent of 62d1f98 (Stabilna Wersja na Pokazy)
 =======
 >>>>>>> parent of 62d1f98 (Stabilna Wersja na Pokazy)
 =======
@@ -337,6 +343,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: -1964169297832550957}
 --- !u!114 &365446475850269047
 MonoBehaviour:
@@ -378,6 +385,8 @@ MonoBehaviour:
   company: 
   priority: 0
   required: 0
+=======
+>>>>>>> parent of 62d1f98 (Stabilna Wersja na Pokazy)
 =======
 >>>>>>> parent of 62d1f98 (Stabilna Wersja na Pokazy)
 =======
@@ -429,6 +438,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &3618663484999573695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,6 +459,8 @@ MonoBehaviour:
   company: 
   priority: 0
   required: 0
+=======
+>>>>>>> parent of 62d1f98 (Stabilna Wersja na Pokazy)
 =======
 >>>>>>> parent of 62d1f98 (Stabilna Wersja na Pokazy)
 =======
