@@ -41,18 +41,6 @@ public class GetPoint : MonoBehaviour
         {
             score += amount;
             UpdatePointsText();
-<<<<<<< Updated upstream
-=======
-
-            
-            if (score >= 800 && !musicPlayed)
-            {
-                
-                music.Play();
-                musicPlayed = true;
-            }
-
->>>>>>> Stashed changes
             if (movingTarget != null)
             {
                 movingTarget.ResumeMoving();
