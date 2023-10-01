@@ -9,8 +9,6 @@ public class GetPoint : MonoBehaviour
     public TMP_Text coins;
     public AttemptsCounter attemptsCounter; // Referencja do skryptu AttemptsCounter NIE TYKAC
 
-    public MovingTargetUpDown movingTarget;
-
     void Start()
     {
         coins = GetComponent<TMP_Text>();
@@ -41,10 +39,6 @@ public class GetPoint : MonoBehaviour
         {
             score += amount;
             UpdatePointsText();
-            if (movingTarget != null)
-            {
-                movingTarget.ResumeMoving();
-            }
         }
     }
 

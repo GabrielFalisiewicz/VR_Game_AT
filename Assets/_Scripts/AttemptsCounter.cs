@@ -40,6 +40,6 @@ public class AttemptsCounter : MonoBehaviour
 
  public   void UpdateAttemptsText()
     {
-        attemptsText.text = "Strzały: 0" + currentAttempts.ToString();
+        attemptsText.text = "Podejścia: " + currentAttempts.ToString();
     }
 }
