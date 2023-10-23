@@ -18,10 +18,10 @@
  * limitations under the License.
  */
 
-using System.Collections.Generic;
-using UnityEditor;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 
 /// <summary>
 /// Core System for the OVRProjectSetup Tool

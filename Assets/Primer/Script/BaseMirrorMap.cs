@@ -16,7 +16,6 @@
 
 
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -61,7 +60,7 @@ namespace Fantasy
     [ExecuteInEditMode]
     public class BaseMirrorMap : AbstractMirrorMap
     {
-        public enum EVertex { LT=0, RT, LB, RB, COUNT}
+        public enum EVertex { LT = 0, RT, LB, RB, COUNT }
 
         public Light MainLight;
 
@@ -172,7 +171,7 @@ namespace Fantasy
             SetupParamters();
 
             mMatMirror = Resources.Load<Material>("matBaseMirror");
-          
+
 
             mRt = new RenderTexture(mImageSize, mImageSize, 0, RenderTextureFormat.ARGB32);
             mRt.antiAliasing = 8;

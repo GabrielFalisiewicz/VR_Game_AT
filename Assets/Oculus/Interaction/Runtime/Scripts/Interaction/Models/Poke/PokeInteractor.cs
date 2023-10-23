@@ -18,10 +18,10 @@
  * limitations under the License.
  */
 
-using System.Collections.Generic;
-using UnityEngine;
 using Oculus.Interaction.Surfaces;
 using System;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Oculus.Interaction
@@ -158,7 +158,7 @@ namespace Oculus.Interaction
             }
         }
 
-        public Action<bool> WhenPassedSurfaceChanged = delegate {};
+        public Action<bool> WhenPassedSurfaceChanged = delegate { };
         private SurfaceHitCache _hitCache;
 
         private Dictionary<PokeInteractable, Matrix4x4> _previousSurfaceTransformMap;
@@ -432,7 +432,7 @@ namespace Oculus.Interaction
                             continue;
                         }
 
-                        if(tangentDistance < closestTangentDistance)
+                        if (tangentDistance < closestTangentDistance)
                         {
                             closestNormalDistance = normalDistance;
                             closestTangentDistance = tangentDistance;
@@ -641,7 +641,7 @@ namespace Oculus.Interaction
 
                         // If normal distance is less than closest normal distance by over closeDistanceThreshold
                         // of the best closest interactable's close distance threshold
-                        if(closestInteractable == null || normalDistance < closestNormalDistance -
+                        if (closestInteractable == null || normalDistance < closestNormalDistance -
                             closestInteractable.CloseDistanceThreshold)
                         {
                             closestInteractable = interactable;

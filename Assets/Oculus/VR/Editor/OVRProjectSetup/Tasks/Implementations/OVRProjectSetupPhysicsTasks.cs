@@ -18,7 +18,6 @@
  * limitations under the License.
  */
 
-using System;
 using UnityEditor;
 using UnityEngine;
 

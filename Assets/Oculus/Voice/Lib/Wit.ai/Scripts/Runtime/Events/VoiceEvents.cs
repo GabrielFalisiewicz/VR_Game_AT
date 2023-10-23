@@ -6,9 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using Meta.WitAi.Interfaces;
 using Meta.WitAi.Requests;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -147,4 +147,4 @@ namespace Meta.WitAi.Events
         public UnityEvent OnMicStoppedListening => OnStoppedListening;
         #endregion
     }
- }
+}

@@ -6,10 +6,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.CallbackHandlers;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using Meta.WitAi.CallbackHandlers;
 
 namespace Meta.WitAi.Windows
 {

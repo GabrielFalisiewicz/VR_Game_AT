@@ -18,14 +18,13 @@
  * limitations under the License.
  */
 
-using System.Collections;
+using OVRSimpleJSON;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System;
 using System.Linq;
-using UnityEngine;
-using OVRSimpleJSON;
 using System.Threading.Tasks;
+using UnityEngine;
 
 /// <summary>
 /// This is a lightweight glTF model loader that is guaranteed to work with models loaded from the Oculus runtime
@@ -932,7 +931,8 @@ public class OVRGLTFLoader
                 }
                 if (inputNodeType != OVRGLTFInputNode.None)
                 {
-                    if (!m_InputAnimationNodes.ContainsKey(inputNodeType)) {
+                    if (!m_InputAnimationNodes.ContainsKey(inputNodeType))
+                    {
                         m_InputAnimationNodes[inputNodeType] = animationNode;
                     }
                 }

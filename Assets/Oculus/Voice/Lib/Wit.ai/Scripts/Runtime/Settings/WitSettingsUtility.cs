@@ -8,8 +8,8 @@
 
 #if UNITY_EDITOR
 using System;
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 namespace Meta.WitAi

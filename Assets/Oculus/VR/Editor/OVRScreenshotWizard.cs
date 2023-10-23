@@ -18,9 +18,9 @@
  * limitations under the License.
  */
 
-using UnityEngine;
-using UnityEditor;
 using System.IO;
+using UnityEditor;
+using UnityEngine;
 
 /// <summary>
 /// From the selected transform, takes a cubemap screenshot that can be submitted with the application

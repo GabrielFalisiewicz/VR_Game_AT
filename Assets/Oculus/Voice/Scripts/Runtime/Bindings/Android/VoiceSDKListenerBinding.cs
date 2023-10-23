@@ -18,10 +18,10 @@
  * limitations under the License.
  */
 
-using System;
 using Meta.WitAi;
 using Meta.WitAi.Events;
 using Meta.WitAi.Json;
+using System;
 using UnityEngine;
 
 namespace Oculus.Voice.Bindings.Android
@@ -34,7 +34,8 @@ namespace Oculus.Voice.Bindings.Android
         public VoiceEvents VoiceEvents => _voiceService.VoiceEvents;
         public TelemetryEvents TelemetryEvents => _voiceService.TelemetryEvents;
 
-        public enum StoppedListeningReason : int {
+        public enum StoppedListeningReason : int
+        {
             NoReasonProvided = 0,
             Inactivity = 1,
             Timeout = 2,
@@ -99,7 +100,8 @@ namespace Oculus.Voice.Bindings.Android
         public void onStoppedListening(int reason)
         {
             VoiceEvents.OnStoppedListening?.Invoke();
-            switch((StoppedListeningReason)reason){
+            switch ((StoppedListeningReason)reason)
+            {
                 case StoppedListeningReason.NoReasonProvided:
                     break;
                 case StoppedListeningReason.Inactivity:

@@ -1,7 +1,5 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -44,7 +42,7 @@ public class MediaPlayerImage : Image
         Color32 color32 = color;
         toFill.Clear();
 
-        switch(m_ButtonType)
+        switch (m_ButtonType)
         {
             case ButtonType.Play:
                 {

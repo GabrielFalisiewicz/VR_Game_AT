@@ -6,11 +6,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using Meta.Voice;
 using Meta.WitAi.Configuration;
 using Meta.WitAi.Data.Configuration;
-using Meta.WitAi.Json;
+using System;
 
 namespace Meta.WitAi.Requests
 {

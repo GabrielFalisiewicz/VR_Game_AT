@@ -18,10 +18,10 @@
  * limitations under the License.
  */
 
-using Meta.WitAi.Data.Configuration;
-using Meta.WitAi.Windows;
 using Meta.WitAi;
+using Meta.WitAi.Data.Configuration;
 using Meta.WitAi.Data.Info;
+using Meta.WitAi.Windows;
 using Oculus.Voice.Utility;
 using UnityEditor;
 using UnityEngine;

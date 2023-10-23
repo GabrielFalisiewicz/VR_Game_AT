@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using UnityEditor;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using UnityEditor;
 
 namespace Gradle
 {

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StopTarget : MonoBehaviour
@@ -10,7 +8,7 @@ public class StopTarget : MonoBehaviour
     {
         if (other.CompareTag("arrow"))
         {
-            
+
             movingTarget?.StopMoving();
         }
     }

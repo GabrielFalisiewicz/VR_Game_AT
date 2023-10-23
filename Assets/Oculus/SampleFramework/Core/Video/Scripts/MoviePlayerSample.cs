@@ -1,16 +1,16 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-using UnityEngine;
 using System;
 using System.IO;
+using UnityEngine;
 
 public class MoviePlayerSample : MonoBehaviour
 {
-    private bool    videoPausedBeforeAppPause = false;
+    private bool videoPausedBeforeAppPause = false;
 
     private UnityEngine.Video.VideoPlayer videoPlayer = null;
-    private OVROverlay          overlay = null;
-    private Renderer            mediaRenderer = null;
+    private OVROverlay overlay = null;
+    private Renderer mediaRenderer = null;
 
     public bool IsPlaying { get; private set; }
     public long Duration { get; private set; }
@@ -92,7 +92,7 @@ public class MoviePlayerSample : MonoBehaviour
             {
                 int w = NativeVideoPlayer.VideoWidth;
                 int h = NativeVideoPlayer.VideoHeight;
-                switch(NativeVideoPlayer.VideoStereoMode)
+                switch (NativeVideoPlayer.VideoStereoMode)
                 {
                     case NativeVideoPlayer.StereoMode.Mono:
                         Stereo = VideoStereo.Mono;
@@ -145,17 +145,17 @@ public class MoviePlayerSample : MonoBehaviour
             {
                 case VideoStereo.LeftRight:
                     // set source matrices for left/right
-                    sourceLeft  = new Rect(0.0f, 0.0f, 0.5f, 1.0f);
+                    sourceLeft = new Rect(0.0f, 0.0f, 0.5f, 1.0f);
                     sourceRight = new Rect(0.5f, 0.0f, 0.5f, 1.0f);
                     break;
                 case VideoStereo.TopBottom:
                     // set source matrices for top/bottom
-                    sourceLeft  = new Rect(0.0f, 0.5f, 1.0f, 0.5f);
+                    sourceLeft = new Rect(0.0f, 0.5f, 1.0f, 0.5f);
                     sourceRight = new Rect(0.0f, 0.0f, 1.0f, 0.5f);
                     break;
                 case VideoStereo.BottomTop:
                     // set source matrices for top/bottom
-                    sourceLeft  = new Rect(0.0f, 0.0f, 1.0f, 0.5f);
+                    sourceLeft = new Rect(0.0f, 0.0f, 1.0f, 0.5f);
                     sourceRight = new Rect(0.0f, 0.5f, 1.0f, 0.5f);
                     break;
             }
@@ -309,7 +309,7 @@ public class MoviePlayerSample : MonoBehaviour
             PlaybackPosition = (long)(videoPlayer.time * 1000L);
 
 #if UNITY_2019_1_OR_NEWER
-            Duration = (long)(videoPlayer.length * 1000L); 
+            Duration = (long)(videoPlayer.length * 1000L);
 #else
             Duration = videoPlayer.frameRate > 0 ? (long)(videoPlayer.frameCount / videoPlayer.frameRate * 1000L) : 0L;
 #endif
@@ -329,7 +329,7 @@ public class MoviePlayerSample : MonoBehaviour
                 OVRManager.display.displayFrequency = 72.0f;
             }
         }
-  }
+    }
 
     public void SetPlaybackSpeed(float speed)
     {
@@ -343,7 +343,7 @@ public class MoviePlayerSample : MonoBehaviour
         {
             videoPlayer.playbackSpeed = speed;
         }
-    }    
+    }
 
     public void Stop()
     {
@@ -359,10 +359,10 @@ public class MoviePlayerSample : MonoBehaviour
         IsPlaying = false;
     }
 
-  /// <summary>
-  /// Pauses video playback when the app loses or gains focus
-  /// </summary>
-  void OnApplicationPause(bool appWasPaused)
+    /// <summary>
+    /// Pauses video playback when the app loses or gains focus
+    /// </summary>
+    void OnApplicationPause(bool appWasPaused)
     {
         Debug.Log("OnApplicationPause: " + appWasPaused);
         if (appWasPaused)

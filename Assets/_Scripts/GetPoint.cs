@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class GetPoint : MonoBehaviour
 {
@@ -19,8 +17,8 @@ public class GetPoint : MonoBehaviour
 
     public void resetscore()
     {
-         score = 0;
-        attemptsCounter.CurrentAttempts = attemptsCounter.maxAttempts; 
+        score = 0;
+        attemptsCounter.CurrentAttempts = attemptsCounter.maxAttempts;
         UpdatePointsText();
         attemptsCounter.UpdateAttemptsText();
         DestroyObjectsWithTag("StickArrow");

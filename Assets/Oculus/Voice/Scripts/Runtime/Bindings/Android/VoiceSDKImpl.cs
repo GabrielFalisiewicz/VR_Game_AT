@@ -18,7 +18,6 @@
  * limitations under the License.
  */
 
-using System;
 using Meta.WitAi;
 using Meta.WitAi.Configuration;
 using Meta.WitAi.Events;
@@ -26,6 +25,7 @@ using Meta.WitAi.Interfaces;
 using Meta.WitAi.Requests;
 using Oculus.Voice.Core.Bindings.Android;
 using Oculus.Voice.Interfaces;
+using System;
 using Debug = UnityEngine.Debug;
 
 namespace Oculus.Voice.Bindings.Android

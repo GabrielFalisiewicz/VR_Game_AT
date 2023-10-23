@@ -6,11 +6,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.Utilities;
 using System;
 using System.Reflection;
 using System.Threading;
-using Meta.WitAi.Utilities;
-using UnityEngine;
 
 namespace Meta.WitAi
 {
@@ -63,32 +62,48 @@ namespace Meta.WitAi
             var dictionary = new DictionaryList<string, RegisteredMatchIntent>();
             foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
             {
-                try {
-                    foreach (Type t in assembly.GetTypes()) {
-                        try {
-                            foreach (var method in t.GetMethods()) {
-                                try {
-                                    foreach (var attribute in method.GetCustomAttributes(typeof(MatchIntent))) {
-                                        try {
+                try
+                {
+                    foreach (Type t in assembly.GetTypes())
+                    {
+                        try
+                        {
+                            foreach (var method in t.GetMethods())
+                            {
+                                try
+                                {
+                                    foreach (var attribute in method.GetCustomAttributes(typeof(MatchIntent)))
+                                    {
+                                        try
+                                        {
                                             var mi = (MatchIntent)attribute;
-                                            dictionary[mi.Intent].Add(new RegisteredMatchIntent() {
+                                            dictionary[mi.Intent].Add(new RegisteredMatchIntent()
+                                            {
                                                 type = t,
                                                 method = method,
                                                 matchIntent = mi
                                             });
-                                        } catch (Exception e) {
+                                        }
+                                        catch (Exception e)
+                                        {
                                             VLog.E(e);
                                         }
                                     }
-                                } catch (Exception e) {
+                                }
+                                catch (Exception e)
+                                {
                                     VLog.E(e);
                                 }
                             }
-                        } catch (Exception e) {
+                        }
+                        catch (Exception e)
+                        {
                             VLog.E(e);
                         }
                     }
-                } catch (Exception e) {
+                }
+                catch (Exception e)
+                {
                     VLog.E(e);
                 }
             }

@@ -19,8 +19,6 @@
  */
 
 using UnityEngine;
-using System.Collections;
-using System.Threading;
 
 /// <summary>
 /// (Deprecated) Contains information about the user's preferences and body dimensions.

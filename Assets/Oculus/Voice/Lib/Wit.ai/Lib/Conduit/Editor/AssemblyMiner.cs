@@ -6,13 +6,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using Meta.WitAi;
-using Meta.WitAi.Data.Info;
 
 namespace Meta.Conduit.Editor
 {
@@ -143,7 +142,7 @@ namespace Meta.Conduit.Editor
 
         private ManifestParameter GetManifestParameters(ParameterInfo parameter, Type attributeType, string actionID)
         {
-            
+
             List<string> aliases;
             List<string> examples;
 
@@ -202,8 +201,8 @@ namespace Meta.Conduit.Editor
                     VLog.E($"Method {method.Name} in assembly {assembly.FullName} had null declaring type");
                     continue;
                 }
-                
-                
+
+
                 var attributes = method.GetCustomAttributes(typeof(ConduitActionAttribute), false);
                 if (attributes.Length == 0)
                 {
@@ -280,7 +279,7 @@ namespace Meta.Conduit.Editor
                 {
                     continue;
                 }
-                
+
                 var parameters = new List<ManifestParameter>();
 
                 var action = new ManifestErrorHandler()
@@ -315,7 +314,7 @@ namespace Meta.Conduit.Editor
                     VLog.E("Second parameter must be an exception for error handler " + method.Name);
                     continue;
                 }
-                
+
                 foreach (var parameter in methodParameters)
                 {
                     var supported = _parameterValidator.IsSupportedParameterType(parameter.ParameterType);
@@ -325,10 +324,10 @@ namespace Meta.Conduit.Editor
                         VLog.W($"Conduit does not currently support parameter type: {parameter.ParameterType}");
                         continue;
                     }
-                    
+
                     parameters.Add(GetManifestParameters(parameter, attributeType, action.ID));
                 }
-               
+
                 if (compatibleParameters)
                 {
                     action.Parameters = parameters;

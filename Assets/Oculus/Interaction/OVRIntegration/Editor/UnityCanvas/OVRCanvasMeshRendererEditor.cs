@@ -20,11 +20,10 @@
 
 using Oculus.Interaction.Editor;
 using System;
-using UnityEngine;
 using UnityEditor;
-
-using props = Oculus.Interaction.UnityCanvas.OVRCanvasMeshRenderer.Properties;
+using UnityEngine;
 using baseProps = Oculus.Interaction.UnityCanvas.CanvasMeshRenderer.Properties;
+using props = Oculus.Interaction.UnityCanvas.OVRCanvasMeshRenderer.Properties;
 using rtprops = Oculus.Interaction.UnityCanvas.CanvasRenderTexture.Properties;
 
 namespace Oculus.Interaction.UnityCanvas.Editor

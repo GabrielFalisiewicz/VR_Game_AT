@@ -18,11 +18,11 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using Meta.WitAi;
 using Meta.WitAi.Dictation;
 using Meta.WitAi.Dictation.Data;
 using Meta.WitAi.Dictation.Events;
+using UnityEngine;
 
 namespace Oculus.Voice.Dictation.Bindings.Android
 {

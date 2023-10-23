@@ -20,7 +20,6 @@
 
 using System;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace Oculus.Interaction
 {

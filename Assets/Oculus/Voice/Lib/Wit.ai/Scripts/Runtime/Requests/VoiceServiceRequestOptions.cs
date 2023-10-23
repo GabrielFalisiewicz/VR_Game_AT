@@ -6,9 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.Voice;
 using System;
 using System.Collections.Generic;
-using Meta.Voice;
 
 namespace Meta.WitAi.Requests
 {

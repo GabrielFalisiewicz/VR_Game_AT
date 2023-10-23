@@ -6,16 +6,16 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.Conduit;
+using Meta.WitAi.Data;
+using Meta.WitAi.Json;
 using System;
 using System.Reflection;
 using System.Text;
-using Meta.WitAi.Data;
-using Meta.WitAi.Json;
-using Meta.Conduit;
 
 namespace Meta.WitAi
 {
-    [Obsolete ("Use ParameterProvider.SetSpecializedParameter() instead of this class")]
+    [Obsolete("Use ParameterProvider.SetSpecializedParameter() instead of this class")]
     internal class WitConduitParameterProvider : ParameterProvider
     {
         protected override object GetSpecializedParameter(ParameterInfo formalParameter)

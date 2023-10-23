@@ -22,7 +22,7 @@ using System;
 
 namespace Oculus.Interaction.Deprecated
 {
-    [Obsolete ("Replaced by IPolyline")]
+    [Obsolete("Replaced by IPolyline")]
     public interface ITeleportArc
     {
     }

@@ -18,8 +18,8 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using Oculus.Interaction.Body.Input;
+using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace Oculus.Interaction.Body.PoseDetection

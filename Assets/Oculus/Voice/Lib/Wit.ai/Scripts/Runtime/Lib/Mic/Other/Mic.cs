@@ -25,13 +25,12 @@
 #define EDITOR_PERMISSION_POPUP
 #endif
 
-using System;
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using Meta.WitAi.Data;
 using Meta.WitAi.Interfaces;
-using Meta.WitAi;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Meta.WitAi.Lib
 {
@@ -203,7 +202,7 @@ namespace Meta.WitAi.Lib
 
         private void OnApplicationFocus(bool hasFocus)
         {
-            #if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
             if (hasFocus && IsRecording)
             {
                 VLog.D($"Mic was recording and app is resumed, resuming listening on {CurrentDeviceName}");
@@ -215,18 +214,18 @@ namespace Meta.WitAi.Lib
                 VLog.D($"Stopping listening on {CurrentDeviceName} due to loss of focus.");
                 StopMicrophone();
             }
-            #endif
+#endif
         }
 
         private void OnApplicationPause(bool pauseStatus)
         {
-            #if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
             if (pauseStatus)
             {
                 VLog.D($"Stopping listening on {CurrentDeviceName} due to application pause.");
                 StopMicrophone();
             }
-            #endif
+#endif
         }
 
         private void OnDestroy()
@@ -326,14 +325,14 @@ namespace Meta.WitAi.Lib
             }
             if (AudioClip != null)
             {
-                #if UNITY_EDITOR
+#if UNITY_EDITOR
                 if (!Application.isPlaying)
                 {
                     // Editor only
                     DestroyImmediate(AudioClip);
                 }
                 else
-                #endif
+#endif
                 {
                     // Safe destroy
                     Destroy(AudioClip);

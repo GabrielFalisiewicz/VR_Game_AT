@@ -19,9 +19,9 @@ namespace Meta.Conduit
         /// <summary>
         /// Triggers a method to be executed if an error is thrown
         /// </summary>
-        public OnConduitFailedParameterResolutionAttribute() 
+        public OnConduitFailedParameterResolutionAttribute()
         {
-            
+
         }
     }
 }

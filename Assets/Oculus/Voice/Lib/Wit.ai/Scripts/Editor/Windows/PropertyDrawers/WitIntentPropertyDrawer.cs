@@ -6,11 +6,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.Data.Configuration;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEditor;
 using UnityEngine;
-using System.Reflection;
-using Meta.WitAi.Data.Configuration;
 
 namespace Meta.WitAi.Windows
 {
@@ -18,7 +18,7 @@ namespace Meta.WitAi.Windows
     {
         // Maps the expansion status of references foldouts
         private readonly Dictionary<string, bool> _referencesExpanded = new Dictionary<string, bool>();
-        
+
         // Use name value for title if possible
         protected override string GetLocalizedText(SerializedProperty property, string key)
         {
@@ -58,7 +58,7 @@ namespace Meta.WitAi.Windows
             {
                 return;
             }
-            
+
             EditorGUI.indentLevel++;
             if (subfieldProperty.arraySize == 0)
             {
@@ -83,7 +83,7 @@ namespace Meta.WitAi.Windows
             {
                 return;
             }
-            
+
             var assemblyWalker = WitConfigurationEditor.AssemblyWalker;
             if (assemblyWalker == null)
             {
@@ -100,7 +100,7 @@ namespace Meta.WitAi.Windows
             }
 
             var contexts = manifest.GetInvocationContexts(intentName);
-            
+
             if (!_referencesExpanded.ContainsKey(intentName))
             {
                 _referencesExpanded[intentName] = false;
@@ -110,7 +110,7 @@ namespace Meta.WitAi.Windows
             {
                 return;
             }
-            
+
             EditorGUI.indentLevel++;
             foreach (var context in contexts)
             {

@@ -21,7 +21,6 @@
 using Oculus.Interaction.Input;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace Oculus.Interaction.Throw
 {

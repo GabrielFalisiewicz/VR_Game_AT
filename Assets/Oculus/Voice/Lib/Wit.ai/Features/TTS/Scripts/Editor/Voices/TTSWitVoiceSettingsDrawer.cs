@@ -6,20 +6,20 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.Data.Configuration;
+using Meta.WitAi.Data.Info;
+using Meta.WitAi.Lib;
+using Meta.WitAi.TTS.Integrations;
+using Meta.WitAi.Windows;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UnityEditor;
-using Meta.WitAi.TTS.Integrations;
-using Meta.WitAi.Windows;
-using Meta.WitAi.Data.Info;
-using Meta.WitAi.Lib;
-using Meta.WitAi.Data.Configuration;
 using UnityEngine;
 
 namespace Meta.WitAi.TTS.Editor.Voices
 {
-    [CustomPropertyDrawer(typeof( TTSWitVoiceSettings))]
+    [CustomPropertyDrawer(typeof(TTSWitVoiceSettings))]
     public class TTSWitVoiceSettingsDrawer : PropertyDrawer
     {
         // Constants for var layout
@@ -38,7 +38,7 @@ namespace Meta.WitAi.TTS.Editor.Voices
         private string[] _voiceNames;
 
         // Subfields
-        private static readonly FieldInfo[] _fields = FieldGUI.GetFields(typeof( TTSWitVoiceSettings));
+        private static readonly FieldInfo[] _fields = FieldGUI.GetFields(typeof(TTSWitVoiceSettings));
 
         // Determine height
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
@@ -171,7 +171,7 @@ namespace Meta.WitAi.TTS.Editor.Voices
         {
             // Get tts wit if possible
             object targetObject = property.serializedObject.targetObject;
-            if (targetObject == null || targetObject.GetType() !=  typeof(TTSWit))
+            if (targetObject == null || targetObject.GetType() != typeof(TTSWit))
             {
                 return;
             }

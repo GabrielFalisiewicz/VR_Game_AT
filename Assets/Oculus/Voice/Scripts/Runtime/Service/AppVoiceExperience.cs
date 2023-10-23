@@ -18,8 +18,6 @@
  * limitations under the License.
  */
 
-using System;
-using System.Globalization;
 using Meta.WitAi;
 using Meta.WitAi.Configuration;
 using Meta.WitAi.Data;
@@ -30,9 +28,10 @@ using Meta.WitAi.Requests;
 using Oculus.Voice.Bindings.Android;
 using Oculus.Voice.Core.Bindings.Android.PlatformLogger;
 using Oculus.Voice.Core.Bindings.Interfaces;
-using Oculus.Voice.Core.Utilities;
 using Oculus.Voice.Interfaces;
 using Oculus.VoiceSDK.Utilities;
+using System;
+using System.Globalization;
 using UnityEngine;
 
 namespace Oculus.Voice
@@ -86,11 +85,11 @@ namespace Oculus.Voice
                                                   null == TranscriptionProvider;
         #endregion
 
-        #if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
         public bool HasPlatformIntegrations => usePlatformServices && voiceServiceImpl is VoiceSDKImpl;
-        #else
+#else
         public bool HasPlatformIntegrations => false;
-        #endif
+#endif
 
         public bool EnableConsoleLogging => enableConsoleLogging;
 
@@ -192,7 +191,7 @@ namespace Oculus.Voice
             {
                 if (voiceServiceImpl is VoiceSDKImpl)
                 {
-                    ((VoiceSDKImpl) voiceServiceImpl).Disconnect();
+                    ((VoiceSDKImpl)voiceServiceImpl).Disconnect();
                 }
 
                 if (voiceSDKLoggerImpl is VoiceSDKPlatformLoggerImpl)
@@ -284,9 +283,9 @@ namespace Oculus.Voice
                 MicPermissionsManager.RequestMicPermission();
             }
 
-            #if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
             platformService?.SetRuntimeConfiguration(witRuntimeConfiguration);
-            #endif
+#endif
 
             // Logging
             VoiceEvents.OnResponse?.AddListener(OnWitResponseListener);
@@ -308,7 +307,7 @@ namespace Oculus.Voice
         protected override void OnDisable()
         {
             base.OnDisable();
-            #if UNITY_ANDROID
+#if UNITY_ANDROID
             if (voiceServiceImpl is VoiceSDKImpl platformImpl)
             {
                 platformImpl.Disconnect();
@@ -318,7 +317,7 @@ namespace Oculus.Voice
             {
                 loggerImpl.Disconnect();
             }
-            #endif
+#endif
             voiceServiceImpl = null;
             voiceSDKLoggerImpl = null;
 

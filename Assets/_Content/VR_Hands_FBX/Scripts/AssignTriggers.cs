@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -16,7 +14,7 @@ public class AssignTriggers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(handAnimation == null)
+        if (handAnimation == null)
             handAnimation = GetComponentInChildren<HandAnimation>();
         if (handAnimation == null)
             return;

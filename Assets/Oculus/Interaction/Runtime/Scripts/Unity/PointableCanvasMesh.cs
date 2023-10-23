@@ -18,8 +18,8 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using Oculus.Interaction.UnityCanvas;
+using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Oculus.Interaction

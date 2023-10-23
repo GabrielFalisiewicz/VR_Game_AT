@@ -18,10 +18,7 @@
  * limitations under the License.
  */
 
-using System;
 using UnityEngine;
-using UnityEngine.Assertions;
-using UnityEngine.Serialization;
 
 namespace Oculus.Interaction
 {

@@ -18,10 +18,10 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
+using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 namespace Oculus.Interaction.PoseDetection.Debug
 {

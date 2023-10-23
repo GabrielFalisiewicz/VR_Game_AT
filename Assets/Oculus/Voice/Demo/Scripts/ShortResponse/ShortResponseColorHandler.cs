@@ -18,10 +18,10 @@
  * limitations under the License.
  */
 
-using System;
 using Meta.WitAi;
 using Meta.WitAi.Data;
 using Meta.WitAi.Data.Configuration;
+using System;
 using UnityEngine;
 
 namespace Oculus.Voice.Demo
@@ -80,7 +80,7 @@ namespace Oculus.Voice.Demo
 
         #region SHAPES
         // Validate & set shape
-        [ValidatePartialIntent(intent:SHAPE_SELECT_INTENT_ID, minConfidence:MIN_CONFIDENCE)]
+        [ValidatePartialIntent(intent: SHAPE_SELECT_INTENT_ID, minConfidence: MIN_CONFIDENCE)]
         public void OnValidateShapeSelect(VoiceSession sessionData, string shape)
         {
             int index;
@@ -117,7 +117,7 @@ namespace Oculus.Voice.Demo
 
         #region COLORS
         // Validate & set color
-        [ValidatePartialIntent(intent:COLOR_SET_INTENT_ID,minConfidence:MIN_CONFIDENCE)]
+        [ValidatePartialIntent(intent: COLOR_SET_INTENT_ID, minConfidence: MIN_CONFIDENCE)]
         public void OnValidateColorSet(VoiceSession sessionData, string color)
         {
             Color c;

@@ -20,15 +20,11 @@
 
 #if USING_XR_SDK_OPENXR
 using System;
-using System.Runtime.InteropServices;
-using AOT;
 using UnityEngine;
-using UnityEngine.XR.OpenXR;
 using UnityEngine.XR.OpenXR.Features;
 
 #if UNITY_EDITOR
 using UnityEditor;
-using UnityEditor.XR.OpenXR;
 using UnityEditor.XR.OpenXR.Features;
 #endif
 

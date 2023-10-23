@@ -22,7 +22,6 @@ using Oculus.Interaction.Input;
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace Oculus.Interaction.PoseDetection.Debug
 {

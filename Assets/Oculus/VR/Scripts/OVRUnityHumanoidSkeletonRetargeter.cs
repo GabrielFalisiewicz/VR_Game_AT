@@ -114,7 +114,7 @@ public partial class OVRUnityHumanoidSkeletonRetargeter : OVRSkeleton
 
     protected OVRHumanBodyBonesMappings.BodySection[] BodySectionsToAlign
     {
-        get =>  _bodySectionsToAlign;
+        get => _bodySectionsToAlign;
     }
 
     private readonly OVRHumanBodyBonesMappings.BodySection[] _bodySectionToPosition =

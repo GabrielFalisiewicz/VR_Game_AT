@@ -6,9 +6,11 @@ namespace Meta.WitAi.Events.UnityEventListeners
     [RequireComponent(typeof(ITranscriptionEventProvider))]
     public class TranscriptionEventListener : MonoBehaviour, ITranscriptionEvent
     {
-        [SerializeField] private WitTranscriptionEvent onPartialTranscription = new
+        [SerializeField]
+        private WitTranscriptionEvent onPartialTranscription = new
             WitTranscriptionEvent();
-        [SerializeField] private WitTranscriptionEvent onFullTranscription = new
+        [SerializeField]
+        private WitTranscriptionEvent onFullTranscription = new
             WitTranscriptionEvent();
 
         public WitTranscriptionEvent OnPartialTranscription => onPartialTranscription;

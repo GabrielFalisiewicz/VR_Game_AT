@@ -6,11 +6,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using Meta.WitAi.Events;
 using Meta.WitAi.Interfaces;
 using Meta.WitAi.Lib;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Meta.WitAi.Data
@@ -127,7 +127,7 @@ namespace Meta.WitAi.Data
         {
             if (null == _micDataBuffer && audioBufferConfiguration.micBufferLengthInSeconds > 0)
             {
-                var bufferSize = (int) Mathf.Ceil(2 *
+                var bufferSize = (int)Mathf.Ceil(2 *
                                                   audioBufferConfiguration
                                                       .micBufferLengthInSeconds * 1000 *
                                                   audioBufferConfiguration.sampleLengthInMs);
@@ -147,9 +147,9 @@ namespace Meta.WitAi.Data
 
             for (int i = 0; i < sampleCount; i++)
             {
-                short data = (short) (samples[i] * rescaleFactor);
-                _micDataBuffer.Push((byte) data);
-                _micDataBuffer.Push((byte) (data >> 8));
+                short data = (short)(samples[i] * rescaleFactor);
+                _micDataBuffer.Push((byte)data);
+                _micDataBuffer.Push((byte)(data >> 8));
             }
         }
 
@@ -165,7 +165,7 @@ namespace Meta.WitAi.Data
         /// <returns></returns>
         public RingBuffer<byte>.Marker CreateMarker(float offset)
         {
-            var samples = (int) (AudioEncoding.samplerate * offset);
+            var samples = (int)(AudioEncoding.samplerate * offset);
             return _micDataBuffer.CreateMarker(samples);
         }
 

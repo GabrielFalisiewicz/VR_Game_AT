@@ -19,7 +19,6 @@
  */
 
 using System;
-using System.Diagnostics;
 
 internal static class OVRTelemetry
 {

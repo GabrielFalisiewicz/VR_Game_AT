@@ -12,7 +12,7 @@ namespace UnityEngine.XR.OpenXR.Samples.MeshingFeature
     /// </summary>
 #if UNITY_EDITOR
     [OpenXRFeature(UiName = "Sample: Meshing Teapot",
-        BuildTargetGroups = new []{BuildTargetGroup.Standalone, BuildTargetGroup.WSA, BuildTargetGroup.Android},
+        BuildTargetGroups = new[] { BuildTargetGroup.Standalone, BuildTargetGroup.WSA, BuildTargetGroup.Android },
         Company = "Unity",
         Desc = "Example feature extension showing how supply a mesh from native code.",
         DocumentationLink = Constants.k_DocumentationURL,
@@ -31,25 +31,25 @@ namespace UnityEngine.XR.OpenXR.Samples.MeshingFeature
             new List<XRMeshSubsystemDescriptor>();
 
         /// <inheritdoc />
-        protected override void OnSubsystemCreate ()
+        protected override void OnSubsystemCreate()
         {
             CreateSubsystem<XRMeshSubsystemDescriptor, XRMeshSubsystem>(s_MeshDescriptors, "Sample Meshing");
         }
 
         /// <inheritdoc />
-        protected override void OnSubsystemStart ()
+        protected override void OnSubsystemStart()
         {
             StartSubsystem<XRMeshSubsystem>();
         }
 
         /// <inheritdoc />
-        protected override void OnSubsystemStop ()
+        protected override void OnSubsystemStop()
         {
             StopSubsystem<XRMeshSubsystem>();
         }
 
         /// <inheritdoc />
-        protected override void OnSubsystemDestroy ()
+        protected override void OnSubsystemDestroy()
         {
             DestroySubsystem<XRMeshSubsystem>();
         }

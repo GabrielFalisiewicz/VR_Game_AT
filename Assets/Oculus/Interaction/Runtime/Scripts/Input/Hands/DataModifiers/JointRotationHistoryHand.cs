@@ -18,9 +18,7 @@
  * limitations under the License.
  */
 
-using Oculus.Interaction.Throw;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Oculus.Interaction.Input
 {

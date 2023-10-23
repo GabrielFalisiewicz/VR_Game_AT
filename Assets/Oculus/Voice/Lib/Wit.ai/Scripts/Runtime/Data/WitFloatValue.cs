@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using Meta.WitAi.Json;
+using System;
 using UnityEngine;
 
 namespace Meta.WitAi.Data
@@ -28,7 +28,7 @@ namespace Meta.WitAi.Data
             {
                 fValue = f;
             }
-            else if(null != value && !float.TryParse("" + value, out fValue))
+            else if (null != value && !float.TryParse("" + value, out fValue))
             {
                 return false;
             }

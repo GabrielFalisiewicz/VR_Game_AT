@@ -18,10 +18,8 @@
  * limitations under the License.
  */
 
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 // Class that manages loading of Ktx Textures through OVRPlugin

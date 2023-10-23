@@ -20,9 +20,9 @@
 
 using Meta.WitAi;
 using Meta.WitAi.Windows;
-using UnityEngine;
-using Oculus.Voice.Utility;
 using Oculus.Voice.Inspectors;
+using Oculus.Voice.Utility;
+using UnityEngine;
 
 namespace Oculus.Voice.Windows
 {

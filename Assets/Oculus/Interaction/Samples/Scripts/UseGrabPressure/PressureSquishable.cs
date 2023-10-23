@@ -20,7 +20,6 @@
 
 using Oculus.Interaction.HandGrab;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace Oculus.Interaction
 {
@@ -30,9 +29,11 @@ namespace Oculus.Interaction
         [SerializeField]
         private GameObject _squishableObject;
 
-        [SerializeField] [Range(0.01f, 1)]
+        [SerializeField]
+        [Range(0.01f, 1)]
         private float _maxSquish = 0.25f;
-        [SerializeField] [Range(0.01f, 1)]
+        [SerializeField]
+        [Range(0.01f, 1)]
         private float _maxStretch = 0.15f;
 
         protected bool _started;

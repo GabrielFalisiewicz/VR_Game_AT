@@ -6,10 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System.IO;
-using Meta.WitAi;
 using Meta.WitAi.Dictation;
-using Meta.WitAi.Windows;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 

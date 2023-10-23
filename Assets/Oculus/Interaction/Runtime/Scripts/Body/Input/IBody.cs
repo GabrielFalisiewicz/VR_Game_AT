@@ -18,8 +18,8 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using System;
+using UnityEngine;
 
 namespace Oculus.Interaction.Body.Input
 {

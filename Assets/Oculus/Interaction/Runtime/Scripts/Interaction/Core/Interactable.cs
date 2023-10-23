@@ -18,11 +18,11 @@
  * limitations under the License.
  */
 
+using Oculus.Interaction.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using Oculus.Interaction.Collections;
 
 namespace Oculus.Interaction
 {
@@ -118,7 +118,7 @@ namespace Oculus.Interaction
                 if (_state == value) return;
                 InteractableState previousState = _state;
                 _state = value;
-                WhenStateChanged(new InteractableStateChangeArgs(previousState,_state));
+                WhenStateChanged(new InteractableStateChangeArgs(previousState, _state));
             }
         }
 

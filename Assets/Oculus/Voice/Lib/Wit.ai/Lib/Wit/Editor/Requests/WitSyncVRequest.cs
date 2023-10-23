@@ -6,17 +6,17 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
-using System.Collections.Generic;
 using Meta.WitAi.Data.Info;
 using Meta.WitAi.Json;
+using System;
+using System.Collections.Generic;
 
 namespace Meta.WitAi.Requests
 {
     internal class WitSyncVRequest : WitVRequest, IWitSyncVRequest
     {
         // Constructor
-        public WitSyncVRequest(IWitRequestConfiguration configuration) : base(configuration, null, true) {}
+        public WitSyncVRequest(IWitRequestConfiguration configuration) : base(configuration, null, true) { }
 
         /// <summary>
         /// Submits an intent to be added to the current wit app

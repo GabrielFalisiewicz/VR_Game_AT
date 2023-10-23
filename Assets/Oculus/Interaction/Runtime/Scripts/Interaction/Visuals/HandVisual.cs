@@ -22,7 +22,6 @@ using Oculus.Interaction.Input;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace Oculus.Interaction
 {
@@ -116,7 +115,7 @@ namespace Oculus.Interaction
             {
                 _skinnedMeshRenderer.enabled = true;
             }
-            else if(IsVisible && ForceOffVisibility)
+            else if (IsVisible && ForceOffVisibility)
             {
                 _skinnedMeshRenderer.enabled = false;
             }

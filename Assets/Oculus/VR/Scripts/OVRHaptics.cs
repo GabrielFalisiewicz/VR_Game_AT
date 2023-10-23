@@ -18,12 +18,9 @@
  * limitations under the License.
  */
 
-using UnityEngine;
-using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using UnityEngine;
 
 /// <summary>
 /// Plays tactile effects on a tracked VR controller.

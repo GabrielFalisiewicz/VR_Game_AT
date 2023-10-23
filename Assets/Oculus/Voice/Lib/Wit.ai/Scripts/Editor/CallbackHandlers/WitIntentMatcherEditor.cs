@@ -6,11 +6,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.Data.Info;
+using Meta.WitAi.Windows;
 using System;
 using System.Linq;
 using System.Reflection;
-using Meta.WitAi.Data.Info;
-using Meta.WitAi.Windows;
 using UnityEditor;
 using UnityEngine;
 

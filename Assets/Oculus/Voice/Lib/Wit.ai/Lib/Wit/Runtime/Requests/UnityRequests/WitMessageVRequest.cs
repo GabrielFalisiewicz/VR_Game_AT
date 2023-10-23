@@ -6,15 +6,15 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System.Collections.Generic;
 using Meta.WitAi.Json;
+using System.Collections.Generic;
 
 namespace Meta.WitAi.Requests
 {
     internal class WitMessageVRequest : WitVRequest
     {
         // Constructor
-        public WitMessageVRequest(IWitRequestConfiguration configuration, string requestId) : base(configuration, requestId, false) {}
+        public WitMessageVRequest(IWitRequestConfiguration configuration, string requestId) : base(configuration, requestId, false) { }
 
         /// <summary>
         /// Voice message request

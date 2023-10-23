@@ -19,7 +19,6 @@
  */
 
 using UnityEngine;
-using UnityEngine.Assertions;
 using static OVRSkeleton;
 
 namespace Oculus.Interaction.Input

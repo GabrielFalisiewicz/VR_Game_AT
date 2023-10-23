@@ -18,9 +18,8 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using Oculus.Interaction.Body.Input;
-
+using UnityEngine;
 using IOVRSkeletonDataProvider = OVRSkeleton.IOVRSkeletonDataProvider;
 using OVRBoneId = OVRPlugin.BoneId;
 

@@ -6,21 +6,21 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Lib.Wit.Runtime.Requests;
+using Meta.Conduit;
+using Meta.Conduit.Editor;
+using Meta.WitAi.Configuration;
+using Meta.WitAi.Data.Configuration;
+using Meta.WitAi.Lib;
+using Meta.WitAi.Utilities;
+using Meta.WitAi.Windows.Conponents;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using Lib.Wit.Runtime.Requests;
-using Meta.Conduit.Editor;
-using Meta.WitAi.Configuration;
-using Meta.WitAi.Data.Configuration;
-using Meta.WitAi.Utilities;
-using Meta.Conduit;
-using Meta.WitAi.Lib;
 using UnityEditor;
 using UnityEngine;
-using Meta.WitAi.Windows.Conponents;
 
 namespace Meta.WitAi.Windows
 {
@@ -250,7 +250,7 @@ namespace Meta.WitAi.Windows
             {
                 if (string.IsNullOrEmpty(_appName))
                 {
-                    bool isValid =  WitConfigurationUtility.IsServerTokenValid(_serverToken);
+                    bool isValid = WitConfigurationUtility.IsServerTokenValid(_serverToken);
                     GUI.enabled = isValid;
                     if (WitEditorUI.LayoutTextButton(WitTexts.Texts.ConfigurationRefreshButtonLabel))
                     {
@@ -474,7 +474,7 @@ namespace Meta.WitAi.Windows
         // Determine if tab should show
         protected virtual bool ShouldTabShow(Meta.WitAi.Data.Info.WitAppInfo appInfo, string tabID)
         {
-            if(string.IsNullOrEmpty(appInfo.id))
+            if (string.IsNullOrEmpty(appInfo.id))
             {
                 return false;
             }
@@ -555,18 +555,21 @@ namespace Meta.WitAi.Windows
 
         private void CheckAutoTrainAvailabilityIfNeeded()
         {
-            if (_didCheckAutoTrainAvailability || !WitConfigurationUtility.IsServerTokenValid(_serverToken)) {
+            if (_didCheckAutoTrainAvailability || !WitConfigurationUtility.IsServerTokenValid(_serverToken))
+            {
                 return;
             }
 
             _didCheckAutoTrainAvailability = true;
-            CheckAutoTrainIsAvailable(Configuration, (isAvailable) => {
+            CheckAutoTrainIsAvailable(Configuration, (isAvailable) =>
+            {
                 _isAutoTrainAvailable = isAvailable;
             });
         }
 
         [UnityEditor.Callbacks.DidReloadScripts]
-        private static void OnScriptsReloaded() {
+        private static void OnScriptsReloaded()
+        {
             foreach (var configuration in WitConfigurationUtility.GetLoadedConfigurations())
             {
                 if (configuration != null && configuration.useConduit)
@@ -620,11 +623,11 @@ namespace Meta.WitAi.Windows
 
             var configName = configuration.name;
             var manifestName = Path.GetFileNameWithoutExtension(unityPath);
-            #if UNITY_2021_2_OR_NEWER
+#if UNITY_2021_2_OR_NEWER
             var configPath = AssetDatabase.GetAssetPath(configuration);
             configName = $"<a href=\"{configPath}\">{configName}</a>";
             manifestName = $"<a href=\"{unityPath}\">{manifestName}</a>";
-            #endif
+#endif
             VLog.D($"Conduit manifest generated\nConfiguration: {configName}\nManifest: {manifestName}\nGeneration Time: {generationTime.TotalMilliseconds} ms");
 
             if (openManifest)
@@ -638,7 +641,8 @@ namespace Meta.WitAi.Windows
         {
             var assemblyNames = AssemblyWalker.GetAllAssemblies().Select(a => a.FullName).ToList();
             AssemblyWalker.AssembliesToIgnore = new HashSet<string>(Configuration.excludedAssemblies);
-            WitMultiSelectionPopup.Show(assemblyNames, AssemblyWalker.AssembliesToIgnore, (disabledAssemblies) => {
+            WitMultiSelectionPopup.Show(assemblyNames, AssemblyWalker.AssembliesToIgnore, (disabledAssemblies) =>
+            {
                 AssemblyWalker.AssembliesToIgnore = new HashSet<string>(disabledAssemblies);
                 Configuration.excludedAssemblies = new List<string>(AssemblyWalker.AssembliesToIgnore);
                 GenerateManifestIfNeeded();
@@ -670,7 +674,7 @@ namespace Meta.WitAi.Windows
 
             // Sync
             _syncInProgress = true;
-            EditorUtility.DisplayProgressBar("Conduit Entity Sync", "Generating Manifest.", 0f );
+            EditorUtility.DisplayProgressBar("Conduit Entity Sync", "Generating Manifest.", 0f);
             GenerateManifest(Configuration, false);
             var manifest = ManifestLoader.LoadManifest(Configuration.ManifestLocalPath);
             const float initializationProgress = 0.1f;

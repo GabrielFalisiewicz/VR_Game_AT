@@ -18,8 +18,8 @@
  * limitations under the License.
  */
 
-using System;
 using Oculus.Interaction.Surfaces;
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;

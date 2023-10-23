@@ -58,7 +58,7 @@ namespace Oculus.Voice.Demo.UIShapesDemo
 
         private Step currentStep = Step.Ready;
         internal Step CurrentStep => currentStep;
-        internal string CurrentStepText => steps[(int) currentStep];
+        internal string CurrentStepText => steps[(int)currentStep];
 
         private void OnValidate()
         {
@@ -110,7 +110,7 @@ namespace Oculus.Voice.Demo.UIShapesDemo
             }
 
 
-            instructionText.text = steps[(int) currentStep];
+            instructionText.text = steps[(int)currentStep];
 #endif
         }
     }
@@ -121,7 +121,7 @@ namespace Oculus.Voice.Demo.UIShapesDemo
     {
         public override void OnInspectorGUI()
         {
-            var instructions = (Instructions) target;
+            var instructions = (Instructions)target;
 
             if (instructions.CurrentStep == Instructions.Step.Ready)
             {

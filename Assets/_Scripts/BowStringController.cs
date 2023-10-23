@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -69,7 +66,7 @@ public class BowStringController : MonoBehaviour
         if (interactor != null)
         {
             //convert bow string mid point position to the local space of the MidPoint
-            Vector3 midPointLocalSpace = 
+            Vector3 midPointLocalSpace =
                 midPointParent.InverseTransformPoint(midPointGrabObject.position); // localPosition
 
             //get the offset

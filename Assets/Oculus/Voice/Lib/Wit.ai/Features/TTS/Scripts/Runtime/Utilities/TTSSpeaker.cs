@@ -6,14 +6,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.TTS.Data;
+using Meta.WitAi.TTS.Interfaces;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
-using Meta.WitAi.TTS.Data;
-using Meta.WitAi.TTS.Interfaces;
 
 namespace Meta.WitAi.TTS.Utilities
 {
@@ -96,7 +96,8 @@ namespace Meta.WitAi.TTS.Utilities
         [HideInInspector] [SerializeField] public string presetVoiceID;
         public TTSVoiceSettings VoiceSettings => _tts.GetPresetVoiceSettings(presetVoiceID);
         // Audio source
-        [SerializeField] [FormerlySerializedAs("_source")]
+        [SerializeField]
+        [FormerlySerializedAs("_source")]
         public AudioSource AudioSource;
 
         [Tooltip("Text that is added to the front of any Speech() request")]
@@ -316,7 +317,7 @@ namespace Meta.WitAi.TTS.Utilities
             _willHaveQueue = true;
             Stop();
             _willHaveQueue = false;
-            yield return SpeakQueuedAsync(new string[] {textToSpeak}, diskCacheSettings);
+            yield return SpeakQueuedAsync(new string[] { textToSpeak }, diskCacheSettings);
         }
         public IEnumerator SpeakAsync(string textToSpeak)
         {
@@ -604,7 +605,7 @@ namespace Meta.WitAi.TTS.Utilities
         protected virtual void OnPlaybackBegin()
         {
             // Ignore if currently playing or nothing in uque
-            if (SpeakingClip != null ||  _queuedClips.Count == 0)
+            if (SpeakingClip != null || _queuedClips.Count == 0)
             {
                 return;
             }

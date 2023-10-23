@@ -18,9 +18,9 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using Oculus.Interaction.Surfaces;
 using System;
+using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Oculus.Interaction

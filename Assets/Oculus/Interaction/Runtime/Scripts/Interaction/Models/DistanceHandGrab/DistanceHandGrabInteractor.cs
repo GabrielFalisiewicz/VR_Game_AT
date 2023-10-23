@@ -372,7 +372,7 @@ namespace Oculus.Interaction.HandGrab
         protected override DistanceHandGrabInteractable ComputeCandidate()
         {
             DistanceHandGrabInteractable interactable = _distantCandidateComputer.ComputeCandidate(
-               DistanceHandGrabInteractable.Registry, this,out Vector3 bestHitPoint);
+               DistanceHandGrabInteractable.Registry, this, out Vector3 bestHitPoint);
             HitPoint = bestHitPoint;
 
             if (interactable == null)

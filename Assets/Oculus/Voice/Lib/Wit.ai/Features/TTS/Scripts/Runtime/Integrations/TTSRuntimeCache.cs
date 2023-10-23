@@ -6,13 +6,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.TTS.Data;
+using Meta.WitAi.TTS.Events;
+using Meta.WitAi.TTS.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
-using Meta.WitAi.TTS.Data;
-using Meta.WitAi.TTS.Interfaces;
-using Meta.WitAi.TTS.Events;
 
 namespace Meta.WitAi.TTS.Integrations
 {

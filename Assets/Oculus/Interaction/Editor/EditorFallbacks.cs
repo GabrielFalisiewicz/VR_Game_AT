@@ -19,8 +19,8 @@
  */
 
 //This file was auto generated.
-using UnityEditor;
 using Oculus.Interaction.Editor;
+using UnityEditor;
 
 namespace Oculus.Interaction.Editor.Generated
 {

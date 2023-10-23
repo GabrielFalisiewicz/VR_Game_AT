@@ -21,8 +21,8 @@
 using System;
 using System.IO;
 using System.Xml;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 public class BuildAssetBundles : MonoBehaviour
 {

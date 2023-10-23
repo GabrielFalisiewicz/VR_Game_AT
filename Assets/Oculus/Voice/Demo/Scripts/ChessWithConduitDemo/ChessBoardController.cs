@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Meta.Conduit;
 using Meta.WitAi;
+using System;
 using UnityEngine;
 
 namespace Oculus.Voice.Demo.ConduitChessDemo
@@ -14,7 +12,7 @@ namespace Oculus.Voice.Demo.ConduitChessDemo
         public GameObject numbers;
         public GameObject chessPiece;
         public UnityEngine.UI.Text errorText;
-        private Vector3 _targetPosition = new Vector3(0,2,0);
+        private Vector3 _targetPosition = new Vector3(0, 2, 0);
 
 
         // Update is called once per frame
@@ -25,14 +23,14 @@ namespace Oculus.Voice.Demo.ConduitChessDemo
 
         public enum ChessBoardNumber
         {
-           One,
-           Two,
-           Three,
-           Four,
-           Five,
-           Six,
-           Seven,
-           Eight
+            One,
+            Two,
+            Three,
+            Four,
+            Five,
+            Six,
+            Seven,
+            Eight
         }
         public enum ChessBoardLetter
         {
@@ -46,7 +44,7 @@ namespace Oculus.Voice.Demo.ConduitChessDemo
             H
         }
         [MatchIntent("MoveChessPiece")]
-        public void MoveChessPiece(ChessBoardLetter letter,ChessBoardNumber number)
+        public void MoveChessPiece(ChessBoardLetter letter, ChessBoardNumber number)
         {
             Debug.Log("Move chess piece to " + letter + number);
 
@@ -56,7 +54,7 @@ namespace Oculus.Voice.Demo.ConduitChessDemo
         }
 
         [OnConduitFailedParameterResolution()]
-        public void OnConduitFailedParameterResolution(string intent , Exception ex)
+        public void OnConduitFailedParameterResolution(string intent, Exception ex)
         {
             Debug.Log("Failed to resolve parameter for intent " + intent + " with error " + ex.Message);
             errorText.text = ex.Message;

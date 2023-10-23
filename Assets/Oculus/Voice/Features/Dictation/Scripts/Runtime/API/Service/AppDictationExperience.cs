@@ -18,21 +18,21 @@
  * limitations under the License.
  */
 
-using System;
-using System.Globalization;
 using Meta.WitAi;
-using Meta.WitAi.Json;
 using Meta.WitAi.Configuration;
 using Meta.WitAi.Data.Configuration;
 using Meta.WitAi.Dictation;
 using Meta.WitAi.Dictation.Data;
 using Meta.WitAi.Events;
 using Meta.WitAi.Interfaces;
+using Meta.WitAi.Json;
 using Meta.WitAi.Requests;
-using Oculus.Voice.Dictation.Bindings.Android;
-using Oculus.VoiceSDK.Utilities;
 using Oculus.Voice.Core.Bindings.Android.PlatformLogger;
 using Oculus.Voice.Core.Bindings.Interfaces;
+using Oculus.Voice.Dictation.Bindings.Android;
+using Oculus.VoiceSDK.Utilities;
+using System;
+using System.Globalization;
 using UnityEngine;
 
 namespace Oculus.Voice.Dictation
@@ -114,7 +114,7 @@ namespace Oculus.Voice.Dictation
             {
                 if (_dictationServiceImpl is PlatformDictationImpl)
                 {
-                    ((PlatformDictationImpl) _dictationServiceImpl).Disconnect();
+                    ((PlatformDictationImpl)_dictationServiceImpl).Disconnect();
                 }
 
                 if (_voiceSDKLogger is VoiceSDKPlatformLoggerImpl)
@@ -278,7 +278,7 @@ namespace Oculus.Voice.Dictation
         /// </summary>
         public void Toggle()
         {
-            if(Active) Deactivate();
+            if (Active) Deactivate();
             else Activate();
         }
 

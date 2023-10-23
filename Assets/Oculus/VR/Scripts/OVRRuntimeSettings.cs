@@ -23,8 +23,8 @@ using System.IO;
 using System;
 
 #if UNITY_EDITOR
-    using UnityEditor;
-    using System.Linq;
+using UnityEditor;
+using System.Linq;
 #endif
 
 public class OVRRuntimeSettings : ScriptableObject

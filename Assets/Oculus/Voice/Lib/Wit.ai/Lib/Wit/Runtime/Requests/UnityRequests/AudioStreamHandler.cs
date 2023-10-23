@@ -6,9 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.Json;
 using System;
 using System.Collections.Generic;
-using Meta.WitAi.Json;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -413,8 +413,8 @@ namespace Meta.WitAi.Requests
         {
             switch (decodeType)
             {
-                    case AudioStreamDecodeType.PCM16:
-                        return Mathf.FloorToInt(contentLength / 2f);
+                case AudioStreamDecodeType.PCM16:
+                    return Mathf.FloorToInt(contentLength / 2f);
             }
             return 0;
         }

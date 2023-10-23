@@ -924,25 +924,25 @@ public class OVRSpatialAnchor : MonoBehaviour
                 switch (actionType)
                 {
                     case MultiAnchorActionType.Save:
-                    {
-                        if (AsyncRequestTaskIds.TryGetValue(anchor, out var taskId))
                         {
-                            AsyncRequestTaskIds.Remove(anchor);
-                            OVRTask.GetExisting<bool>(taskId).SetResult(result == OperationResult.Success);
-                        }
+                            if (AsyncRequestTaskIds.TryGetValue(anchor, out var taskId))
+                            {
+                                AsyncRequestTaskIds.Remove(anchor);
+                                OVRTask.GetExisting<bool>(taskId).SetResult(result == OperationResult.Success);
+                            }
 
-                        break;
-                    }
+                            break;
+                        }
                     case MultiAnchorActionType.Share:
-                    {
-                        if (AsyncRequestTaskIds.TryGetValue(anchor, out var taskId))
                         {
-                            AsyncRequestTaskIds.Remove(anchor);
-                            OVRTask.GetExisting<OperationResult>(taskId).SetResult(result);
-                        }
+                            if (AsyncRequestTaskIds.TryGetValue(anchor, out var taskId))
+                            {
+                                AsyncRequestTaskIds.Remove(anchor);
+                                OVRTask.GetExisting<OperationResult>(taskId).SetResult(result);
+                            }
 
-                        break;
-                    }
+                            break;
+                        }
                     default:
                         throw new ArgumentOutOfRangeException(nameof(actionType), actionType, null);
                 }

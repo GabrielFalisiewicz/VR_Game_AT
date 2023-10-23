@@ -18,8 +18,8 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using Oculus.Voice.Core.Bindings.Android;
+using UnityEngine;
 
 namespace Oculus.Voice.Dictation.Bindings.Android
 {
@@ -29,7 +29,7 @@ namespace Oculus.Voice.Dictation.Bindings.Android
         public bool IsRequestActive => binding.Call<bool>("isRequestActive");
         public bool IsSupported => binding.Call<bool>("isSupported");
 
-        public PlatformDictationSDKBinding(AndroidJavaObject sdkInstance) : base(sdkInstance) {}
+        public PlatformDictationSDKBinding(AndroidJavaObject sdkInstance) : base(sdkInstance) { }
 
         public void StartDictation(DictationConfigurationBinding configuration)
         {

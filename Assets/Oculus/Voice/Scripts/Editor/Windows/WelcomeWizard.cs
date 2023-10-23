@@ -18,12 +18,12 @@
  * limitations under the License.
  */
 
-using System.Collections.Generic;
 using Meta.WitAi;
 using Meta.WitAi.Data.Configuration;
-using Meta.WitAi.Windows;
 using Meta.WitAi.Data.Info;
+using Meta.WitAi.Windows;
 using Oculus.Voice.Utility;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Oculus.Voice.Windows

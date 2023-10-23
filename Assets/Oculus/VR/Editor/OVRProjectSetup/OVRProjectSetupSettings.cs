@@ -18,9 +18,9 @@
  * limitations under the License.
  */
 
-using UnityEngine;
-using UnityEditor;
 using System;
+using UnityEditor;
+using UnityEngine;
 
 [System.Serializable]
 public class OVRProjectSetupSettings : ScriptableObject

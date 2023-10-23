@@ -20,7 +20,6 @@
 
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace Oculus.Interaction
 {
@@ -136,7 +135,7 @@ namespace Oculus.Interaction
             }
 
             List<IInteractorView> secondaryViews = _primaryToSecondaryMap[primary];
-            foreach(IInteractorView secondaryView in secondaryViews)
+            foreach (IInteractorView secondaryView in secondaryViews)
             {
                 SecondaryInteractable.RemoveInteractorByIdentifier(secondaryView.Identifier);
             }

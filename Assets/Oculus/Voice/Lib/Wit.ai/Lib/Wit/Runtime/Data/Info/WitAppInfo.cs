@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using Meta.WitAi.Json;
+using System;
 using UnityEngine;
 
 namespace Meta.WitAi.Data.Info
@@ -64,32 +64,32 @@ namespace Meta.WitAi.Data.Info
         /// <summary>
         /// Intents that can be determined by this Wit AI application
         /// </summary>
-        #if UNITY_2021_3_2 || UNITY_2021_3_3 || UNITY_2021_3_4 || UNITY_2021_3_5
+#if UNITY_2021_3_2 || UNITY_2021_3_3 || UNITY_2021_3_4 || UNITY_2021_3_5
         [NonReorderable]
-        #endif
+#endif
         public WitIntentInfo[] intents;
         /// <summary>
         /// Entities associated with this Wit AI application
         /// </summary>
-        #if UNITY_2021_3_2 || UNITY_2021_3_3 || UNITY_2021_3_4 || UNITY_2021_3_5
+#if UNITY_2021_3_2 || UNITY_2021_3_3 || UNITY_2021_3_4 || UNITY_2021_3_5
         [NonReorderable]
-        #endif
+#endif
         public WitEntityInfo[] entities;
         /// <summary>
         /// Traits associated with this Wit AI application
         /// </summary>
-        #if UNITY_2021_3_2 || UNITY_2021_3_3 || UNITY_2021_3_4 || UNITY_2021_3_5
+#if UNITY_2021_3_2 || UNITY_2021_3_3 || UNITY_2021_3_4 || UNITY_2021_3_5
         [NonReorderable]
-        #endif
+#endif
         public WitTraitInfo[] traits;
 
         [Header("TTS Info")]
         /// <summary>
         /// TTS Voices available for this app on Wit.ai
         /// </summary>
-        #if UNITY_2021_3_2 || UNITY_2021_3_3 || UNITY_2021_3_4 || UNITY_2021_3_5
+#if UNITY_2021_3_2 || UNITY_2021_3_3 || UNITY_2021_3_4 || UNITY_2021_3_5
         [NonReorderable]
-        #endif
+#endif
         public WitVoiceInfo[] voices;
     }
 }

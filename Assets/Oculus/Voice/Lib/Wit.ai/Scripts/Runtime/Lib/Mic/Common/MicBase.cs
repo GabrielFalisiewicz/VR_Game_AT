@@ -6,10 +6,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
-using System.Collections;
 using Meta.WitAi.Data;
 using Meta.WitAi.Interfaces;
+using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Meta.WitAi.Lib
@@ -32,15 +32,15 @@ namespace Meta.WitAi.Lib
         // Mic states
         public bool IsRecording { get; private set; }
         public virtual bool IsMicListening
-        #if !UNITY_WEBGL
+#if !UNITY_WEBGL
         {
             get => Microphone.IsRecording(GetMicName());
         }
-        #else
+#else
         {
             get => false;
         }
-        #endif
+#endif
         public bool IsInputAvailable => GetMicClip() != null;
 
         // Encoding settings for wit

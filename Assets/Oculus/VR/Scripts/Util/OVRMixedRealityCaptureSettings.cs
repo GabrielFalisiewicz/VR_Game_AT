@@ -22,9 +22,9 @@
 #define OVR_ANDROID_MRC
 #endif
 
-using UnityEngine;
 using System;
 using System.IO;
+using UnityEngine;
 
 #if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN || UNITY_ANDROID
 public class OVRMixedRealityCaptureSettings : ScriptableObject, OVRMixedRealityCaptureConfiguration

@@ -6,11 +6,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
-using System.Collections.Generic;
+using Meta.WitAi.Data.Info;
 using Meta.WitAi.Interfaces;
 using Meta.WitAi.Json;
-using Meta.WitAi.Data.Info;
+using System;
+using System.Collections.Generic;
 
 namespace Meta.WitAi.Data.Entities
 {

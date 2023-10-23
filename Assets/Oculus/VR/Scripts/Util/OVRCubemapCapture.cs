@@ -18,9 +18,8 @@
  * limitations under the License.
  */
 
-using UnityEngine;
-using System.Collections;
 using System.IO;
+using UnityEngine;
 
 /// <summary>
 /// Helper script for capture cubemap and save it into PNG or JPG file

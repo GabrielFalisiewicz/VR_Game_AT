@@ -89,7 +89,8 @@ namespace Oculus.Interaction.PoseDetection
                         ++configCount;
                         fingerFeatureStateUsages.Add(new FingerFeatureStateUsage()
                         {
-                            handFinger = handFinger, config = config
+                            handFinger = handFinger,
+                            config = config
                         });
                     }
                 }

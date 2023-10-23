@@ -6,9 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using UnityEngine;
-using UnityEditor;
 using Meta.WitAi.Data.Info;
+using UnityEditor;
 
 namespace Meta.WitAi.Windows
 {

@@ -19,10 +19,10 @@
  */
 
 
-using System;
 using Oculus.VR.Editor;
-using UnityEngine;
+using System;
 using UnityEditor;
+using UnityEngine;
 
 [CustomEditor(typeof(OVRProjectConfig))]
 public class OVRProjectConfigEditor : Editor
@@ -35,7 +35,7 @@ public class OVRProjectConfigEditor : Editor
         DrawProjectConfigInspector(projectConfig);
     }
 
-        public static void DrawTargetDeviceInspector(OVRProjectConfig projectConfig)
+    public static void DrawTargetDeviceInspector(OVRProjectConfig projectConfig)
     {
         // Target Devices
         EditorGUILayout.LabelField("Target Devices", EditorStyles.boldLabel);

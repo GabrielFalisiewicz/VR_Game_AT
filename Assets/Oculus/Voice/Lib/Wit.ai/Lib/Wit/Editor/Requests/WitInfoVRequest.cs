@@ -6,17 +6,17 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.Data.Info;
+using Meta.WitAi.Json;
 using System.Collections.Generic;
 using UnityEngine;
-using Meta.WitAi.Json;
-using Meta.WitAi.Data.Info;
 
 namespace Meta.WitAi.Requests
 {
     internal class WitInfoVRequest : WitVRequest, IWitInfoVRequest
     {
         // Constructor
-        public WitInfoVRequest(IWitRequestConfiguration configuration, bool useServerToken = true) : base(configuration, null, useServerToken) {}
+        public WitInfoVRequest(IWitRequestConfiguration configuration, bool useServerToken = true) : base(configuration, null, useServerToken) { }
 
         // Get all apps & return the current app info
         public bool RequestAppId(RequestCompleteDelegate<string> onComplete,

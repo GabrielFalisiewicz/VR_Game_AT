@@ -26,7 +26,7 @@ namespace Meta.WitAi.Inspectors
 
             if (Application.isPlaying && target is VoiceService)
             {
-                wit = (VoiceService) target;
+                wit = (VoiceService)target;
 
                 if (wit.Active)
                 {

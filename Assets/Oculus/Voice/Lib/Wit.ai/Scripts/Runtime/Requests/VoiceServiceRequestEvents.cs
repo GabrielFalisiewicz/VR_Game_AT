@@ -6,14 +6,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using Meta.Voice;
+using System;
 using UnityEngine.Events;
 
 namespace Meta.WitAi.Requests
 {
     [Serializable]
-    public class VoiceServiceRequestEvent : UnityEvent<VoiceServiceRequest> {}
+    public class VoiceServiceRequestEvent : UnityEvent<VoiceServiceRequest> { }
 
     [Serializable]
     public class VoiceServiceRequestEvents

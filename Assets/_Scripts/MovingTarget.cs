@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingTarget : MonoBehaviour, IHittable
 {
     private Rigidbody rb;
     private bool stopped = false;
- public int scoreOnHit = 0; 
+    public int scoreOnHit = 0;
     private Vector3 nextposition;
     private Vector3 originPosition;
 
@@ -42,12 +40,12 @@ public class MovingTarget : MonoBehaviour, IHittable
     public void GetHit()
     {
         health--;
-         GetPoint getPointScript = FindObjectOfType<GetPoint>();
-            if (getPointScript != null)
-            {
-                getPointScript.AddPoints(scoreOnHit);
-            }
-        if(health <= 0)
+        GetPoint getPointScript = FindObjectOfType<GetPoint>();
+        if (getPointScript != null)
+        {
+            getPointScript.AddPoints(scoreOnHit);
+        }
+        if (health <= 0)
         {
             rb.isKinematic = false;
             stopped = true;
@@ -58,7 +56,7 @@ public class MovingTarget : MonoBehaviour, IHittable
     {
         if (stopped == false)
         {
-            if(Vector3.Distance(transform.position,nextposition) < arriveThreshold)
+            if (Vector3.Distance(transform.position, nextposition) < arriveThreshold)
             {
                 nextposition = GetNewMovementPosition();
             }
@@ -72,4 +70,4 @@ public class MovingTarget : MonoBehaviour, IHittable
 public interface IHittable
 {
     void GetHit();
-} 
+}

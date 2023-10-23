@@ -6,10 +6,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.Data.Info;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Meta.WitAi.Data.Info;
 
 namespace Meta.Conduit
 {
@@ -19,10 +19,10 @@ namespace Meta.Conduit
 
         public readonly HashSet<string> synonyms;
 
-        public WitKeyword():this("", null)
+        public WitKeyword() : this("", null)
         {
         }
-        
+
         public WitKeyword(string keyword, List<string> synonyms = null)
         {
             this.keyword = keyword;
@@ -42,8 +42,8 @@ namespace Meta.Conduit
                 }
             }
         }
-        
-        public WitKeyword(WitEntityKeywordInfo witEntityKeywordInfo): this(witEntityKeywordInfo.keyword, witEntityKeywordInfo.synonyms)
+
+        public WitKeyword(WitEntityKeywordInfo witEntityKeywordInfo) : this(witEntityKeywordInfo.keyword, witEntityKeywordInfo.synonyms)
         {
         }
 

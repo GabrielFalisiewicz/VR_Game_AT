@@ -26,11 +26,8 @@
 #define REQUIRES_XR_SDK
 #endif
 
-using UnityEngine;
 using UnityEditor;
-using UnityEditor.Callbacks;
-using System;
-using System.IO;
+using UnityEngine;
 
 [InitializeOnLoad]
 class OVREngineConfigurationUpdater

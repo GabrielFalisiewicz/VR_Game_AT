@@ -19,12 +19,11 @@
  */
 
 using System.Collections.Generic;
-using System;
-using System.Reflection;
-using UnityEngine;
-using UnityEditor;
-using System.Text;
 using System.IO;
+using System.Reflection;
+using System.Text;
+using UnityEditor;
+using UnityEngine;
 
 public class OVRSystemProfilerPanel : EditorWindow
 {

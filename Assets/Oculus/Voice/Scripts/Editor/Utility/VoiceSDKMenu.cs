@@ -18,15 +18,15 @@
  * limitations under the License.
  */
 
-using UnityEngine;
-using UnityEditor;
-using Meta.WitAi.Windows;
 using Meta.WitAi.Configuration;
 using Meta.WitAi.Data.Entities;
+using Meta.WitAi.Data.Info;
 using Meta.WitAi.TTS.Editor;
 using Meta.WitAi.TTS.Editor.Preload;
-using Meta.WitAi.Data.Info;
+using Meta.WitAi.Windows;
 using Oculus.Voice.Windows;
+using UnityEditor;
+using UnityEngine;
 
 namespace Oculus.Voice.Utility
 {

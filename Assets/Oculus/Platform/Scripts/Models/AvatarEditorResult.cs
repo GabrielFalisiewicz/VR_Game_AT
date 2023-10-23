@@ -2,22 +2,18 @@
 
 namespace Oculus.Platform.Models
 {
-  using System;
-  using System.Collections;
-  using Oculus.Platform.Models;
-  using System.Collections.Generic;
-  using UnityEngine;
+    using System;
 
-  public class AvatarEditorResult
-  {
-    /// Whether the request has sent.
-    public readonly bool RequestSent;
-
-
-    public AvatarEditorResult(IntPtr o)
+    public class AvatarEditorResult
     {
-      RequestSent = CAPI.ovr_AvatarEditorResult_GetRequestSent(o);
+        /// Whether the request has sent.
+        public readonly bool RequestSent;
+
+
+        public AvatarEditorResult(IntPtr o)
+        {
+            RequestSent = CAPI.ovr_AvatarEditorResult_GetRequestSent(o);
+        }
     }
-  }
 
 }

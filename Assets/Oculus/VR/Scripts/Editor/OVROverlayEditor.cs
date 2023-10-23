@@ -20,10 +20,9 @@
 
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 #if USING_XR_SDK_OCULUS
-using Unity.XR.Oculus;
 #endif
 
 [CustomEditor(typeof(OVROverlay))]

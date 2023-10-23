@@ -19,14 +19,12 @@
  */
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
-using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
-using UnityEngine;
 using Debug = UnityEngine.Debug;
 
 public class OVRNetwork

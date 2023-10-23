@@ -1,8 +1,6 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-using System.Collections.Generic;
 using UnityEditor;
-using System.IO;
 
 public class AndroidVideoEditorUtil
 {
@@ -44,7 +42,7 @@ public class AndroidVideoEditorUtil
         properties.Save();
 
         // Set the API level to 31
-        PlayerSettings.Android.targetSdkVersion = (AndroidSdkVersions) 31;
+        PlayerSettings.Android.targetSdkVersion = (AndroidSdkVersions)31;
     }
 
     [MenuItem("Oculus/Samples/Video/Disable Native Android Video Player")]

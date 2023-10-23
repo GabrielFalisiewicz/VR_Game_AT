@@ -6,13 +6,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System.IO;
 using Meta.WitAi.Configuration;
 using Meta.WitAi.Data.Configuration;
 using Meta.WitAi.Events;
 using Meta.WitAi.Interfaces;
 using Meta.WitAi.Json;
 using Meta.WitAi.Requests;
+using System.IO;
 using UnityEngine;
 
 namespace Meta.WitAi.Dictation

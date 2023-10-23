@@ -6,11 +6,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.TTS.Data;
+using Meta.WitAi.TTS.Utilities;
 using System;
 using UnityEditor;
 using UnityEngine;
-using Meta.WitAi.TTS.Utilities;
-using Meta.WitAi.TTS.Data;
 
 namespace Meta.WitAi.TTS.Editor
 {

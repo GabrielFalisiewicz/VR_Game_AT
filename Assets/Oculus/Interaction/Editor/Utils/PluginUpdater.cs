@@ -19,16 +19,11 @@
  */
 
 using System;
-using System.IO;
-using System.Reflection;
-using UnityEngine;
-using UnityEditor;
-
-using PackageInfo = UnityEditor.PackageManager.PackageInfo;
-using Assert = NUnit.Framework.Assert;
-using Debug = UnityEngine.Debug;
-using System.Diagnostics;
 using System.Collections.Generic;
+using System.IO;
+using UnityEditor;
+using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 namespace Oculus.Interaction
 {
@@ -155,7 +150,7 @@ namespace Oculus.Interaction
                 {
                     // see if the path contains the build target name (e.g. Win64) we're looking for
                     string[] subPaths = path.Split(slashes);
-                    foreach(string subpath in subPaths)
+                    foreach (string subpath in subPaths)
                     {
                         if (subpath == targetPath)
                         {

@@ -20,7 +20,6 @@
 
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace Oculus.Interaction
 {
@@ -41,7 +40,8 @@ namespace Oculus.Interaction
 
         #region Properties
 
-        public int Iterations {
+        public int Iterations
+        {
             get
             {
                 return _iterations;

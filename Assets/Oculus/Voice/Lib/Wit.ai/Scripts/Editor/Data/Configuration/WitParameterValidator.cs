@@ -6,11 +6,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
-using System.Collections.Generic;
+using Meta.Conduit.Editor;
 using Meta.WitAi.Data;
 using Meta.WitAi.Json;
-using Meta.Conduit.Editor;
+using System;
+using System.Collections.Generic;
 
 namespace Meta.WitAi.Windows
 {

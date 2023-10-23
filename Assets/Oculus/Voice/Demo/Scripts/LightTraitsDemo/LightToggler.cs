@@ -18,9 +18,9 @@
  * limitations under the License.
  */
 
-using System;
 using Meta.WitAi;
 using Meta.WitAi.Json;
+using System;
 using UnityEngine;
 
 namespace Oculus.Voice.Demo.LightTraitsDemo
@@ -52,7 +52,7 @@ namespace Oculus.Voice.Demo.LightTraitsDemo
 
             SetLightState((LightState.Off));
         }
-        
+
         [MatchIntent("wit_change_state")]
         public void OnResponse(WitResponseNode commandResult)
         {

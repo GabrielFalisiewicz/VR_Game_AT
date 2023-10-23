@@ -13,8 +13,6 @@
  ******************************************************************************/
 
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -48,9 +46,9 @@ namespace Fantasy
             mMirrorFrame = transform.parent.gameObject;
             if (mMirrorFrame != null)
             {
-              //   BaseMirrorMap mmp = mMirrorFrame.GetComponent<BaseMirrorMap>();
-               //  AbstractMirrorMap mmp = GetMirrorMap();
-               //  mRender.material.shader = mmp.currentShader;
+                //   BaseMirrorMap mmp = mMirrorFrame.GetComponent<BaseMirrorMap>();
+                //  AbstractMirrorMap mmp = GetMirrorMap();
+                //  mRender.material.shader = mmp.currentShader;
             }
         }
 

@@ -18,11 +18,9 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using System;
-using System.Collections;
 using System.Runtime.InteropServices;
-using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 /// Add OVROverlay script to an object with an optional mesh primitive
@@ -947,11 +945,11 @@ public class OVROverlay : MonoBehaviour
         if (!OVRPlugin.UnityOpenXR.Enabled)
         {
 #endif
-        if (!OVRManager.isHmdPresent)
-        {
-            enabled = false;
-            return;
-        }
+            if (!OVRManager.isHmdPresent)
+            {
+                enabled = false;
+                return;
+            }
 #if USING_XR_SDK_OPENXR
         }
 #endif

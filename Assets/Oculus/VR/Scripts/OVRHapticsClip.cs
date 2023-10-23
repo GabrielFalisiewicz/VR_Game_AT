@@ -18,9 +18,8 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using System;
-using System.Collections;
+using UnityEngine;
 
 /// <summary>
 /// A PCM buffer of data for a haptics effect.

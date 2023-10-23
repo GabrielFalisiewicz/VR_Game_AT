@@ -6,16 +6,15 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
-using System.Collections;
-using System.IO;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
-using Meta.WitAi;
-using Meta.WitAi.TTS.Data;
 using Meta.WitAi.Data.Configuration;
 using Meta.WitAi.Json;
+using Meta.WitAi.TTS.Data;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using UnityEditor;
+using UnityEngine;
 
 namespace Meta.WitAi.TTS.Editor.Preload
 {
@@ -165,7 +164,7 @@ namespace Meta.WitAi.TTS.Editor.Preload
                 for (int p = 0; p < voiceData.phrases.Length; p++)
                 {
                     // Iterate progress
-                    float progress = (float) phraseCount / (float) phraseTotal;
+                    float progress = (float)phraseCount / (float)phraseTotal;
                     onProgress?.Invoke(progress);
                     phraseCount++;
 
@@ -200,7 +199,7 @@ namespace Meta.WitAi.TTS.Editor.Preload
 
             // Download
             string log = string.Empty;
-            service.DownloadToDiskCache(phraseData.textToSpeak, string.Empty, voiceSettings, cacheSettings, delegate(TTSClipData data, string path, string error)
+            service.DownloadToDiskCache(phraseData.textToSpeak, string.Empty, voiceSettings, cacheSettings, delegate (TTSClipData data, string path, string error)
             {
                 // Set phrase data
                 phraseData.clipID = data.clipID;

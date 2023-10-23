@@ -158,7 +158,7 @@ namespace Meta.WitAi.Requests
             WitRequestEndpointOverride endpoint = configuration.GetEndpointOverrides();
             uriBuilder.Scheme = string.IsNullOrEmpty(endpoint.uriScheme) ? WitConstants.URI_SCHEME : endpoint.uriScheme;
             uriBuilder.Host = string.IsNullOrEmpty(endpoint.authority) ? WitConstants.URI_AUTHORITY : endpoint.authority;
-            uriBuilder.Port = endpoint.port <= 0 ?  WitConstants.URI_DEFAULT_PORT : endpoint.port;
+            uriBuilder.Port = endpoint.port <= 0 ? WitConstants.URI_DEFAULT_PORT : endpoint.port;
             string apiVersion = string.IsNullOrEmpty(endpoint.witApiVersion) ? WitConstants.API_VERSION : endpoint.witApiVersion;
 
             // Set path
@@ -223,11 +223,11 @@ namespace Meta.WitAi.Requests
             // Use server token
             if (useServerToken)
             {
-                #if UNITY_EDITOR
+#if UNITY_EDITOR
                 token = configuration.GetServerAccessToken();
-                #else
+#else
                 token = string.Empty;
-                #endif
+#endif
             }
             // Trim token
             if (!string.IsNullOrEmpty(token))
@@ -278,11 +278,11 @@ namespace Meta.WitAi.Requests
             userAgent.Append($",{_appIdentifier}");
 
             // Append editor identifier
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             userAgent.Append(",Editor");
-            #else
+#else
             userAgent.Append(",Runtime");
-            #endif
+#endif
 
             // Append unity version
             if (_unityVersion == null) _unityVersion = Application.unityVersion;

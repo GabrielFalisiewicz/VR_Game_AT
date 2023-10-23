@@ -6,7 +6,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using Meta.WitAi.Lib;
 using UnityEditor;
 
 namespace Meta.WitAi.Lib
@@ -18,7 +17,7 @@ namespace Meta.WitAi.Lib
         {
             base.OnInspectorGUI();
 
-            var mic = (Mic) target;
+            var mic = (Mic)target;
 
             int index = EditorGUILayout.Popup("Input", mic.CurrentDeviceIndex, mic.Devices.ToArray());
             if (index != mic.CurrentDeviceIndex)

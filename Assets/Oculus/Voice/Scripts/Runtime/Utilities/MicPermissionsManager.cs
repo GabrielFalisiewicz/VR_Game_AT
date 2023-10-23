@@ -23,8 +23,6 @@
 #endif
 
 using System;
-using System.Collections;
-using UnityEngine;
 #if UNITY_ANDROID
 using UnityEngine.Android;
 #endif
@@ -47,28 +45,28 @@ namespace Oculus.VoiceSDK.Utilities
 
         public static void RequestMicPermission(Action<string> permissionGrantedCallback = null)
         {
-            #if UNITY_ANDROID
+#if UNITY_ANDROID
             if (HasMicPermission())
             {
                 permissionGrantedCallback?.Invoke(Permission.Microphone);
                 return;
             }
-                #if MISSING_ANDROID_PERMISSION_CALLBACK
+#if MISSING_ANDROID_PERMISSION_CALLBACK
                 Permission.RequestUserPermission(Permission.Microphone);
                 CoroutineUtility.StartCoroutine(CheckPermissionGranted(permissionGrantedCallback));
-                #else
+#else
                 var callbacks = new PermissionCallbacks();
                 callbacks.PermissionGranted += s => permissionGrantedCallback?.Invoke(s);
                 Permission.RequestUserPermission(Permission.Microphone, callbacks);
-                #endif
-            #else
+#endif
+#else
             permissionGrantedCallback?.Invoke("android.permission.RECORD_AUDIO");
 
             // Do nothing for now, but eventually we may want to handle IOS/whatever permissions here, too.
-            #endif
+#endif
         }
 
-        #if MISSING_ANDROID_PERMISSION_CALLBACK
+#if MISSING_ANDROID_PERMISSION_CALLBACK
         private const int PERMISSION_CHECK_FRAMES = 3;
         private static IEnumerator CheckPermissionGranted(Action<string> permissionGrantedCallback)
         {
@@ -88,6 +86,6 @@ namespace Oculus.VoiceSDK.Utilities
                 permissionGrantedCallback?.Invoke(Permission.Microphone);
             }
         }
-        #endif
+#endif
     }
 }

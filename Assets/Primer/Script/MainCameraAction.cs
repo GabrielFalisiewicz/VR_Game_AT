@@ -13,8 +13,6 @@
  ******************************************************************************/
 
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -93,9 +91,9 @@ namespace Fantasy
             {
 
                 //RealMirrorMap mmap = mCurrentFocusMFM.GetComponent<RealMirrorMap>();
-               
+
                 mDummyGObj.Set(gameObject);
-             //   mmap.OnSetRelativeCameraViewVectors(mDummyGObj, mDummyGObj, 1.0f, (float)Screen.width / (float)Screen.height);
+                //   mmap.OnSetRelativeCameraViewVectors(mDummyGObj, mDummyGObj, 1.0f, (float)Screen.width / (float)Screen.height);
             }
         }
 

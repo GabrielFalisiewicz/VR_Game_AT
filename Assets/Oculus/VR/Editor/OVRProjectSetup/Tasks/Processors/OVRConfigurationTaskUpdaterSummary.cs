@@ -193,28 +193,28 @@ internal class OVRConfigurationTaskUpdaterSummary
         switch (highestLevel)
         {
             case OVRProjectSetup.TaskLevel.Optional:
-            {
-                Debug.Log(message);
-            }
+                {
+                    Debug.Log(message);
+                }
                 break;
 
             case OVRProjectSetup.TaskLevel.Recommended:
-            {
-                Debug.LogWarning(message);
-            }
-                break;
-
-            case OVRProjectSetup.TaskLevel.Required:
-            {
-                if (OVRProjectSetup.RequiredThrowErrors.Value)
-                {
-                    Debug.LogError(message);
-                }
-                else
                 {
                     Debug.LogWarning(message);
                 }
-            }
+                break;
+
+            case OVRProjectSetup.TaskLevel.Required:
+                {
+                    if (OVRProjectSetup.RequiredThrowErrors.Value)
+                    {
+                        Debug.LogError(message);
+                    }
+                    else
+                    {
+                        Debug.LogWarning(message);
+                    }
+                }
                 break;
         }
     }

@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using Meta.WitAi.Dictation.Data;
+using System;
 using UnityEngine.Events;
 
 namespace Meta.WitAi.Dictation.Events
@@ -15,6 +15,6 @@ namespace Meta.WitAi.Dictation.Events
     [Serializable]
     public class DictationSessionEvent : UnityEvent<DictationSession>
     {
-        
+
     }
 }

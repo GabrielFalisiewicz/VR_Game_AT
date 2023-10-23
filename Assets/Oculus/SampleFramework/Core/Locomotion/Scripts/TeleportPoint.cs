@@ -20,9 +20,9 @@
 
 
 using UnityEngine;
-using System.Collections;
 
-public class TeleportPoint : MonoBehaviour {
+public class TeleportPoint : MonoBehaviour
+{
 
     public float dimmingSpeed = 1;
     public float fullIntensity = 1;
@@ -34,10 +34,11 @@ public class TeleportPoint : MonoBehaviour {
 
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 
-	}
+    }
 
     public Transform GetDestTransform()
     {
@@ -47,11 +48,12 @@ public class TeleportPoint : MonoBehaviour {
 
 
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update()
+    {
         float intensity = Mathf.SmoothStep(fullIntensity, lowIntensity, (Time.time - lastLookAtTime) * dimmingSpeed);
         GetComponent<MeshRenderer>().material.SetFloat("_Intensity", intensity);
-	}
+    }
 
     public void OnLookAt()
     {

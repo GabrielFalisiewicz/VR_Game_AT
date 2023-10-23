@@ -26,16 +26,12 @@
 
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Xml;
 using System.Diagnostics;
-using System.Threading;
 using Oculus.VR.Editor;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
 #if UNITY_ANDROID
@@ -43,12 +39,10 @@ using UnityEditor.Android;
 #endif
 
 #if USING_XR_SDK_OPENXR
-using UnityEngine.XR.OpenXR;
 using UnityEditor.XR.OpenXR.Features;
 #endif
 
 #if USING_XR_SDK_OCULUS
-using Unity.XR.Oculus;
 #endif
 
 [InitializeOnLoad]

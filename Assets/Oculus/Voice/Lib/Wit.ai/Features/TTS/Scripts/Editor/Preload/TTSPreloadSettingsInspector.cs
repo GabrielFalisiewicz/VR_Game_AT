@@ -6,12 +6,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
-using System.Collections.Generic;
-using Meta.WitAi.Data.Configuration;
 using Meta.WitAi.TTS.Data;
 using Meta.WitAi.TTS.Editor.Preload;
 using Meta.WitAi.Utilities;
+using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -191,7 +190,7 @@ namespace Meta.WitAi.TTS.Editor
             }
             if (Settings.data.voices == null)
             {
-                Settings.data.voices = new TTSPreloadVoiceData[] {new TTSPreloadVoiceData()};
+                Settings.data.voices = new TTSPreloadVoiceData[] { new TTSPreloadVoiceData() };
             }
 
             // Begin scroll
@@ -225,7 +224,7 @@ namespace Meta.WitAi.TTS.Editor
             {
                 voiceID = "No Voice Selected";
             }
-            voiceID = $"{(voiceIndex+1)} - {voiceID}";
+            voiceID = $"{(voiceIndex + 1)} - {voiceID}";
 
             // Foldout
             GUILayout.BeginHorizontal();
@@ -320,7 +319,7 @@ namespace Meta.WitAi.TTS.Editor
 
             // Get data
             TTSPreloadPhraseData phraseData = voiceData.phrases[phraseIndex];
-            string title = $"{(phraseIndex+1)} - {phraseData.textToSpeak}";
+            string title = $"{(phraseIndex + 1)} - {phraseData.textToSpeak}";
 
             // Foldout
             GUILayout.BeginHorizontal();

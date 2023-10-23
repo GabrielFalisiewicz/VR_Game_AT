@@ -6,13 +6,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.Reflection;
 using Meta.WitAi;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Text.RegularExpressions;
 using UnityEditor.Compilation;
 using Assembly = UnityEditor.Compilation.Assembly;
 
@@ -80,10 +80,11 @@ namespace Meta.Conduit.Editor
         /// <inheritdoc/>
         public IEnumerable<IConduitAssembly> GetTargetAssemblies()
         {
-            if (AssembliesToIgnore != null && AssembliesToIgnore.Any()) {
+            if (AssembliesToIgnore != null && AssembliesToIgnore.Any())
+            {
                 return GetAllAssemblies().Where(assembly => !AssembliesToIgnore.Contains(assembly.FullName));
             }
-            
+
             return GetAllAssemblies();
         }
 
@@ -91,7 +92,7 @@ namespace Meta.Conduit.Editor
         public IEnumerable<Assembly> GetCompilationAssemblies(AssembliesType assembliesType)
         {
             GenerateExcludedAssembliesShortNames();
-            
+
             if (_compilationAssemblies == null)
             {
                 _compilationAssemblies = CompilationPipeline.GetAssemblies(assembliesType);
@@ -129,7 +130,7 @@ namespace Meta.Conduit.Editor
             singleUnit = false;
             return false;
         }
-        
+
         private void GenerateExcludedAssembliesShortNames()
         {
             _shortAssemblyNamesToIgnore.Clear();

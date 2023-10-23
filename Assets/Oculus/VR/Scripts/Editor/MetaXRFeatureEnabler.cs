@@ -19,12 +19,9 @@
  */
 
 #if USING_XR_SDK_OPENXR
-using System.IO;
-using System.Linq;
-using UnityEngine;
 using UnityEditor;
-using UnityEngine.XR.OpenXR;
 using UnityEditor.XR.OpenXR.Features;
+using UnityEngine;
 
 namespace Meta.XR
 {

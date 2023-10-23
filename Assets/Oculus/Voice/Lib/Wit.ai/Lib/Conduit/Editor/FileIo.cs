@@ -6,9 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi;
 using System;
 using System.IO;
-using Meta.WitAi;
 
 namespace Meta.Conduit
 {

@@ -6,9 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using Meta.WitAi.Events;
 using Meta.WitAi.Interfaces;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;

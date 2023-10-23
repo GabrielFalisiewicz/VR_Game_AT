@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SmallTarget : MonoBehaviour, IHittablee
@@ -9,13 +7,13 @@ public class SmallTarget : MonoBehaviour, IHittablee
     public int scoreOnHit = 0;
     private Vector3 nextPosition;
     private Vector3 originPosition;
-    
+
     [SerializeField]
     private AudioSource audioSource;
 
     [SerializeField]
     private float arriveThreshold, movementRadius = 2, speed = 1;
-    
+
     [Header("Vertical Movement")]
     public float maxHeight = 3.0f;
     public float minHeight = 1.0f;
@@ -46,7 +44,7 @@ public class SmallTarget : MonoBehaviour, IHittablee
 
     public void GetHit()
     {
-        
+
         GetPoint getPointScript = FindObjectOfType<GetPoint>();
         if (getPointScript != null)
         {
@@ -65,7 +63,7 @@ public class SmallTarget : MonoBehaviour, IHittablee
 
             Vector3 direction = nextPosition - transform.position;
             rb.MovePosition(transform.position + direction.normalized * Time.fixedDeltaTime * speed);
-            
+
             // Vertical movement
             if (movingUp)
             {
@@ -85,7 +83,7 @@ public class SmallTarget : MonoBehaviour, IHittablee
                     movingUp = true;
                 }
             }
-            
+
             transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
         }
     }

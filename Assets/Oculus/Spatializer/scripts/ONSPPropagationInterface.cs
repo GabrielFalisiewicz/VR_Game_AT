@@ -23,10 +23,10 @@
  * Content     :   Interface into the Oculus Audio propagation functions
  ***********************************************************************************/
 
+using Oculus.Spatializer.Propagation;
 using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
-using Oculus.Spatializer.Propagation;
 
 namespace Oculus
 {
@@ -78,7 +78,7 @@ class ONSPPropagation
             Debug.Log("Propagation initialized with Wwise Oculus Spatializer plugin");
             return new WwisePluginInterface();
         }
-        catch(System.DllNotFoundException)
+        catch (System.DllNotFoundException)
         {
             // this is fine
         }

@@ -33,13 +33,11 @@ using System.Runtime.InteropServices;
 
 #if USING_XR_SDK
 using UnityEngine.XR;
-using UnityEngine.Experimental.XR;
 #endif
 
 using InputTracking = UnityEngine.XR.InputTracking;
 using Node = UnityEngine.XR.XRNode;
 using NodeState = UnityEngine.XR.XRNodeState;
-using Device = UnityEngine.XR.XRDevice;
 
 /// <summary>
 /// Miscellaneous extension methods that any script can use.

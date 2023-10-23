@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class AttemptsCounter : MonoBehaviour
 {
@@ -38,7 +36,7 @@ public class AttemptsCounter : MonoBehaviour
         return false;
     }
 
- public   void UpdateAttemptsText()
+    public void UpdateAttemptsText()
     {
         attemptsText.text = "Strzały: 0" + currentAttempts.ToString();
     }

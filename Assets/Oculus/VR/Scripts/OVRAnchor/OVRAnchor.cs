@@ -39,25 +39,25 @@ public readonly struct OVRAnchor : IEquatable<OVRAnchor>, IDisposable
 
     internal static OVRPlugin.SpaceQueryInfo GetQueryInfo(SpaceComponentType type,
         OVRSpace.StorageLocation location, int maxResults, double timeout) => new OVRSpaceQuery.Options
-    {
-        QueryType = OVRPlugin.SpaceQueryType.Action,
-        ActionType = OVRPlugin.SpaceQueryActionType.Load,
-        ComponentFilter = type,
-        Location = location,
-        Timeout = timeout,
-        MaxResults = maxResults,
-    }.ToQueryInfo();
+        {
+            QueryType = OVRPlugin.SpaceQueryType.Action,
+            ActionType = OVRPlugin.SpaceQueryActionType.Load,
+            ComponentFilter = type,
+            Location = location,
+            Timeout = timeout,
+            MaxResults = maxResults,
+        }.ToQueryInfo();
 
     internal static OVRPlugin.SpaceQueryInfo GetQueryInfo(IEnumerable<Guid> uuids,
         OVRSpace.StorageLocation location, double timeout) => new OVRSpaceQuery.Options
-    {
-        QueryType = OVRPlugin.SpaceQueryType.Action,
-        ActionType = OVRPlugin.SpaceQueryActionType.Load,
-        UuidFilter = uuids,
-        Location = location,
-        Timeout = timeout,
-        MaxResults = OVRSpaceQuery.Options.MaxUuidCount,
-    }.ToQueryInfo();
+        {
+            QueryType = OVRPlugin.SpaceQueryType.Action,
+            ActionType = OVRPlugin.SpaceQueryActionType.Load,
+            UuidFilter = uuids,
+            Location = location,
+            Timeout = timeout,
+            MaxResults = OVRSpaceQuery.Options.MaxUuidCount,
+        }.ToQueryInfo();
 
     internal static OVRTask<bool> FetchAnchorsAsync(SpaceComponentType type, IList<OVRAnchor> anchors,
         OVRSpace.StorageLocation location = OVRSpace.StorageLocation.Local,

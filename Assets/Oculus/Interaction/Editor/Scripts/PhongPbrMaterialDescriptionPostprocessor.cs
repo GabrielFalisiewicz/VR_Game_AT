@@ -22,8 +22,8 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
-using UnityEngine;
 using UnityEditor.AssetImporters; // AssetImporters namespace became non-experimental in 2020.2.0f1
+using UnityEngine;
 
 /**
  * Asset processor that will read custom PBR properties from a Phong material description as an asset file is
@@ -120,8 +120,8 @@ public class PhongPbrMaterialDescriptionPostprocessor : AssetPostprocessor
             var isAlbedoAlphaChannel = floatProperty > float.Epsilon;
             material.SetFloat(SmoothnessTextureChannelPropId, isAlbedoAlphaChannel ? 1.0f : 0.0f);
 
-            var isOpaque = (material.HasProperty("_Mode") && material.GetFloat("_Mode") ==  0.0) ||
-                           (material.HasProperty("_Surface") && material.GetFloat("_Surface") ==  0.0);
+            var isOpaque = (material.HasProperty("_Mode") && material.GetFloat("_Mode") == 0.0) ||
+                           (material.HasProperty("_Surface") && material.GetFloat("_Surface") == 0.0);
             if (isAlbedoAlphaChannel && isOpaque)
             {
                 material.EnableKeyword("_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A");

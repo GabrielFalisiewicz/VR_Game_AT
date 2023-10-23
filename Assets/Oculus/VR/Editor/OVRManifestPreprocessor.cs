@@ -19,11 +19,11 @@
  */
 
 
-using UnityEngine;
-using UnityEditor;
+using Oculus.VR.Editor;
 using System.IO;
 using System.Xml;
-using Oculus.VR.Editor;
+using UnityEditor;
+using UnityEngine;
 
 public class OVRManifestPreprocessor
 {

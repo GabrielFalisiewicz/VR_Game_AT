@@ -18,12 +18,12 @@
  * limitations under the License.
  */
 
-using System.Collections.Generic;
-using UnityEngine;
-using System.Reflection;
-using System.Linq;
-using UnityEngine.Assertions;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace Oculus.Interaction.PoseDetection.Debug
 {

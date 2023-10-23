@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System.Collections.Generic;
 using Meta.WitAi.TTS.Data;
+using System.Collections.Generic;
 
 namespace Meta.WitAi.TTS.Interfaces
 {

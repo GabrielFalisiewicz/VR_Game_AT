@@ -19,8 +19,8 @@
  */
 
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
+using UnityEngine;
 
 namespace Oculus.Interaction.Surfaces
 {

@@ -469,7 +469,7 @@ public class OVRTrackedKeyboard : MonoBehaviour
 
     private IEnumerator UpdateTrackingStateCoroutine()
     {
-        for (;;)
+        for (; ; )
         {
             // On Link this is called before initialization.
             //We don't want this on our normal flow because it breaks our tests.
@@ -587,7 +587,8 @@ public class OVRTrackedKeyboard : MonoBehaviour
 
         projectedPassthroughRoot.localScale = new Vector3
         {
-            x = SystemKeyboardInfo.Dimensions.x * underlayScaleMultX_, y = underlayScaleConstY_,
+            x = SystemKeyboardInfo.Dimensions.x * underlayScaleMultX_,
+            y = underlayScaleConstY_,
             z = SystemKeyboardInfo.Dimensions.z * underlayScaleMultZ_
         };
 

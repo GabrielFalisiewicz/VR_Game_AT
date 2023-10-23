@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ResetScript : MonoBehaviour
@@ -22,7 +20,7 @@ public class ResetScript : MonoBehaviour
     private void Start()
     {
 
-       
+
 
 
         GameObject Bow = GameObject.FindGameObjectWithTag("Bow");

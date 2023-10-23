@@ -18,10 +18,9 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using System.Runtime.InteropServices;
+using UnityEngine;
 using UnityEngine.Assertions;
-using System.Collections.Generic;
 
 namespace Oculus.Interaction.Input.Filter
 {
@@ -29,7 +28,7 @@ namespace Oculus.Interaction.Input.Filter
     [StructLayout(LayoutKind.Sequential)]
 
     public struct HandData
-   {
+    {
         private const int NumHandJoints = 24;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = NumHandJoints * 4, ArraySubType = UnmanagedType.R4)]
         private float[] jointValues;
@@ -123,7 +122,7 @@ namespace Oculus.Interaction.Input.Filter
         #endregion Oculus Library Methods and Constants
 
         #region Tuneable Values
-        [Header("Settings", order =-1)]
+        [Header("Settings", order = -1)]
         [Tooltip("Applies a One Euro Filter when filter parameters are provided")]
         [SerializeField, Optional]
         private HandFilterParameterBlock _filterParameters = null;
@@ -151,7 +150,7 @@ namespace Oculus.Interaction.Input.Filter
 
             //Release the filter and source
             result = isdk_DataSource_Destroy(_handModifierHandle);
-            this.AssertIsTrue(_isdkSuccess ==  result, $"{nameof(_handModifierHandle)} destroy was unsuccessful. ");
+            this.AssertIsTrue(_isdkSuccess == result, $"{nameof(_handModifierHandle)} destroy was unsuccessful. ");
             result = isdk_DataSource_Destroy(_dataSourceHandle);
             this.AssertIsTrue(_isdkSuccess == result, $"{nameof(_dataSourceHandle)} destroy was unsuccessful. ");
         }
@@ -279,7 +278,7 @@ namespace Oculus.Interaction.Input.Filter
                 return true;
 
             // pipe data asset into temp struct
-            _handData.SetData(handDataAsset.Joints,handDataAsset.Root);
+            _handData.SetData(handDataAsset.Joints, handDataAsset.Root);
 
             // Send it
             int result = isdk_ExternalHandSource_SetData(_dataSourceHandle, _handData);

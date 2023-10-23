@@ -18,9 +18,9 @@
  * limitations under the License.
  */
 
+using Oculus.Interaction.HandGrab.Visuals;
 using UnityEditor;
 using UnityEngine;
-using Oculus.Interaction.HandGrab.Visuals;
 
 namespace Oculus.Interaction.HandGrab.Editor
 {

@@ -6,10 +6,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.TTS.Utilities;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using Meta.WitAi.TTS.Utilities;
 
 namespace Meta.WitAi.TTS.Samples
 {

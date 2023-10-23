@@ -25,7 +25,6 @@ using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Rendering;
 #if USING_URP
-using UnityEngine.Rendering.Universal;
 #endif
 
 

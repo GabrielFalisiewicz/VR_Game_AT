@@ -46,17 +46,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
-using UnityEngine.Rendering;
 
 #if USING_XR_SDK
 using UnityEngine.XR;
-using UnityEngine.Experimental.XR;
 #endif
 
 using Settings = UnityEngine.XR.XRSettings;
@@ -2593,34 +2590,34 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 
                     break;
                 case OVRPlugin.EventType.SpatialAnchorCreateComplete:
-                {
-                    var data =
-                        OVRDeserialize.ByteArrayToStructure<OVRDeserialize.SpatialAnchorCreateCompleteData>(
-                            eventDataBuffer.EventData);
+                    {
+                        var data =
+                            OVRDeserialize.ByteArrayToStructure<OVRDeserialize.SpatialAnchorCreateCompleteData>(
+                                eventDataBuffer.EventData);
 
-                    OVRTask.SetResult(data.RequestId,
-                        data.Result >= 0 ? new OVRAnchor(data.Space, data.Uuid) : OVRAnchor.Null);
-                    SpatialAnchorCreateComplete?.Invoke(data.RequestId, data.Result >= 0, data.Space, data.Uuid);
-                }
+                        OVRTask.SetResult(data.RequestId,
+                            data.Result >= 0 ? new OVRAnchor(data.Space, data.Uuid) : OVRAnchor.Null);
+                        SpatialAnchorCreateComplete?.Invoke(data.RequestId, data.Result >= 0, data.Space, data.Uuid);
+                    }
                     break;
                 case OVRPlugin.EventType.SpaceSetComponentStatusComplete:
-                {
-                    var data = OVRDeserialize
-                        .ByteArrayToStructure<OVRDeserialize.SpaceSetComponentStatusCompleteData>(eventDataBuffer
-                            .EventData);
-                    SpaceSetComponentStatusComplete?.Invoke(data.RequestId, data.Result >= 0, data.Space, data.Uuid,
-                        data.ComponentType, data.Enabled != 0);
-
-                    if (data.ComponentType == OVRPlugin.SpaceComponentType.Locatable)
                     {
-                        OVRTelemetry.Client.MarkerEnd(
-                            OVRTelemetryConstants.Scene.MarkerId.SpatialAnchorSetComponentStatus,
-                            data.Result >= 0 ? OVRPlugin.Qpl.ResultType.Success : OVRPlugin.Qpl.ResultType.Fail,
-                            data.RequestId.GetHashCode());
-                    }
+                        var data = OVRDeserialize
+                            .ByteArrayToStructure<OVRDeserialize.SpaceSetComponentStatusCompleteData>(eventDataBuffer
+                                .EventData);
+                        SpaceSetComponentStatusComplete?.Invoke(data.RequestId, data.Result >= 0, data.Space, data.Uuid,
+                            data.ComponentType, data.Enabled != 0);
 
-                    OVRTask.GetExisting<bool>(data.RequestId).SetResult(data.Result >= 0);
-                }
+                        if (data.ComponentType == OVRPlugin.SpaceComponentType.Locatable)
+                        {
+                            OVRTelemetry.Client.MarkerEnd(
+                                OVRTelemetryConstants.Scene.MarkerId.SpatialAnchorSetComponentStatus,
+                                data.Result >= 0 ? OVRPlugin.Qpl.ResultType.Success : OVRPlugin.Qpl.ResultType.Fail,
+                                data.RequestId.GetHashCode());
+                        }
+
+                        OVRTask.GetExisting<bool>(data.RequestId).SetResult(data.Result >= 0);
+                    }
                     break;
                 case OVRPlugin.EventType.SpaceQueryResults:
                     if (SpaceQueryResults != null)
@@ -2633,12 +2630,12 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 
                     break;
                 case OVRPlugin.EventType.SpaceQueryComplete:
-                {
-                    var data = OVRDeserialize.ByteArrayToStructure<OVRDeserialize.SpaceQueryCompleteData>(
-                        eventDataBuffer.EventData);
-                    SpaceQueryComplete?.Invoke(data.RequestId, data.Result >= 0);
-                    OVRAnchor.OnSpaceQueryCompleteData(data);
-                }
+                    {
+                        var data = OVRDeserialize.ByteArrayToStructure<OVRDeserialize.SpaceQueryCompleteData>(
+                            eventDataBuffer.EventData);
+                        SpaceQueryComplete?.Invoke(data.RequestId, data.Result >= 0);
+                        OVRAnchor.OnSpaceQueryCompleteData(data);
+                    }
                     break;
                 case OVRPlugin.EventType.SpaceSaveComplete:
                     if (SpaceSaveComplete != null)

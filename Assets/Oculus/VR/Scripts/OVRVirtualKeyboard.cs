@@ -20,14 +20,13 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
-using System.Linq;
 
 /// <summary>
 /// Supports Virtual Keyboard integration by providing the implementation to necessary common patterns
@@ -110,33 +109,33 @@ public class OVRVirtualKeyboard : MonoBehaviour
                 switch (eventDataBuffer.EventType)
                 {
                     case OVRPlugin.EventType.VirtualKeyboardCommitText:
-                    {
-                        CommitText?.Invoke(
-                            Encoding.UTF8.GetString(eventDataBuffer.EventData)
-                                .Replace("\0", "")
-                        );
-                        break;
-                    }
+                        {
+                            CommitText?.Invoke(
+                                Encoding.UTF8.GetString(eventDataBuffer.EventData)
+                                    .Replace("\0", "")
+                            );
+                            break;
+                        }
                     case OVRPlugin.EventType.VirtualKeyboardBackspace:
-                    {
-                        Backspace?.Invoke();
-                        break;
-                    }
+                        {
+                            Backspace?.Invoke();
+                            break;
+                        }
                     case OVRPlugin.EventType.VirtualKeyboardEnter:
-                    {
-                        Enter?.Invoke();
-                        break;
-                    }
+                        {
+                            Enter?.Invoke();
+                            break;
+                        }
                     case OVRPlugin.EventType.VirtualKeyboardShown:
-                    {
-                        KeyboardShown?.Invoke();
-                        break;
-                    }
+                        {
+                            KeyboardShown?.Invoke();
+                            break;
+                        }
                     case OVRPlugin.EventType.VirtualKeyboardHidden:
-                    {
-                        KeyboardHidden?.Invoke();
-                        break;
-                    }
+                        {
+                            KeyboardHidden?.Invoke();
+                            break;
+                        }
                 }
             }
         }
@@ -638,7 +637,7 @@ public class OVRVirtualKeyboard : MonoBehaviour
 
                 var animationNodes =
                     virtualKeyboardScene_.animationNodeLookup[animationStates.States[i].AnimationIndex];
-                foreach(var animationNode in animationNodes)
+                foreach (var animationNode in animationNodes)
                 {
                     animationNode.UpdatePose(animationStates.States[i].Fraction, false);
                 }

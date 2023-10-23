@@ -18,9 +18,9 @@
  * limitations under the License.
  */
 
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using TMPro;
 
 namespace Oculus.Interaction.Body.Samples
 {

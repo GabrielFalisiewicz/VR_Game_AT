@@ -18,8 +18,8 @@
  * limitations under the License.
  */
 
-using Meta.WitAi.Configuration;
 using Meta.WitAi;
+using Meta.WitAi.Configuration;
 using UnityEngine;
 
 namespace Oculus.Voice.Bindings.Android

@@ -61,7 +61,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 namespace Meta.WitAi.Json
 {
@@ -148,8 +147,8 @@ namespace Meta.WitAi.Json
             get
             {
                 foreach (var C in Childs)
-                foreach (var D in C.DeepChilds)
-                    yield return D;
+                    foreach (var D in C.DeepChilds)
+                        yield return D;
             }
         }
 
@@ -516,13 +515,13 @@ namespace Meta.WitAi.Json
                                     Token += '\f';
                                     break;
                                 case 'u':
-                                {
-                                    string s = aJSON.Substring(i + 1, 4);
-                                    Token += (char) int.Parse(s,
-                                        System.Globalization.NumberStyles.AllowHexSpecifier);
-                                    i += 4;
-                                    break;
-                                }
+                                    {
+                                        string s = aJSON.Substring(i + 1, 4);
+                                        Token += (char)int.Parse(s,
+                                            System.Globalization.NumberStyles.AllowHexSpecifier);
+                                        i += 4;
+                                        break;
+                                    }
                                 default:
                                     Token += C;
                                     break;
@@ -570,15 +569,15 @@ namespace Meta.WitAi.Json
 
         public void SaveToCompressedFile(string aFileName)
         {
-            #if USE_FileIO
+#if USE_FileIO
             System.IO.Directory.CreateDirectory((new System.IO.FileInfo(aFileName)).Directory.FullName);
             using(var F = System.IO.File.OpenWrite(aFileName))
             {
                 SaveToCompressedStream(F);
             }
-            #else
+#else
             throw new Exception("Can't use File IO stuff in webplayer");
-            #endif
+#endif
         }
         public string SaveToCompressedBase64()
         {
@@ -636,55 +635,55 @@ namespace Meta.WitAi.Json
 
         public static WitResponseNode Deserialize(System.IO.BinaryReader aReader)
         {
-            JSONBinaryTag type = (JSONBinaryTag) aReader.ReadByte();
+            JSONBinaryTag type = (JSONBinaryTag)aReader.ReadByte();
             switch (type)
             {
                 case JSONBinaryTag.Array:
-                {
-                    int count = aReader.ReadInt32();
-                    WitResponseArray tmp = new WitResponseArray();
-                    for (int i = 0; i < count; i++)
-                        tmp.Add(Deserialize(aReader));
-                    return tmp;
-                }
-                case JSONBinaryTag.Class:
-                {
-                    int count = aReader.ReadInt32();
-                    WitResponseClass tmp = new WitResponseClass();
-                    for (int i = 0; i < count; i++)
                     {
-                        string key = aReader.ReadString();
-                        var val = Deserialize(aReader);
-                        tmp.Add(key, val);
+                        int count = aReader.ReadInt32();
+                        WitResponseArray tmp = new WitResponseArray();
+                        for (int i = 0; i < count; i++)
+                            tmp.Add(Deserialize(aReader));
+                        return tmp;
+                    }
+                case JSONBinaryTag.Class:
+                    {
+                        int count = aReader.ReadInt32();
+                        WitResponseClass tmp = new WitResponseClass();
+                        for (int i = 0; i < count; i++)
+                        {
+                            string key = aReader.ReadString();
+                            var val = Deserialize(aReader);
+                            tmp.Add(key, val);
+                        }
+
+                        return tmp;
+                    }
+                case JSONBinaryTag.Value:
+                    {
+                        return new WitResponseData(aReader.ReadString());
+                    }
+                case JSONBinaryTag.IntValue:
+                    {
+                        return new WitResponseData(aReader.ReadInt32());
+                    }
+                case JSONBinaryTag.DoubleValue:
+                    {
+                        return new WitResponseData(aReader.ReadDouble());
+                    }
+                case JSONBinaryTag.BoolValue:
+                    {
+                        return new WitResponseData(aReader.ReadBoolean());
+                    }
+                case JSONBinaryTag.FloatValue:
+                    {
+                        return new WitResponseData(aReader.ReadSingle());
                     }
 
-                    return tmp;
-                }
-                case JSONBinaryTag.Value:
-                {
-                    return new WitResponseData(aReader.ReadString());
-                }
-                case JSONBinaryTag.IntValue:
-                {
-                    return new WitResponseData(aReader.ReadInt32());
-                }
-                case JSONBinaryTag.DoubleValue:
-                {
-                    return new WitResponseData(aReader.ReadDouble());
-                }
-                case JSONBinaryTag.BoolValue:
-                {
-                    return new WitResponseData(aReader.ReadBoolean());
-                }
-                case JSONBinaryTag.FloatValue:
-                {
-                    return new WitResponseData(aReader.ReadSingle());
-                }
-
                 default:
-                {
-                    throw new JSONParseException("Error deserializing JSON. Unknown tag: " + type);
-                }
+                    {
+                        throw new JSONParseException("Error deserializing JSON. Unknown tag: " + type);
+                    }
             }
         }
 
@@ -696,14 +695,14 @@ namespace Meta.WitAi.Json
         }
         public static JSONNode LoadFromCompressedFile(string aFileName)
         {
-            #if USE_FileIO
+#if USE_FileIO
             using(var F = System.IO.File.OpenRead(aFileName))
             {
                 return LoadFromCompressedStream(F);
             }
-            #else
+#else
             throw new Exception("Can't use File IO stuff in webplayer");
-            #endif
+#endif
         }
         public static JSONNode LoadFromCompressedBase64(string aBase64)
         {
@@ -865,7 +864,7 @@ namespace Meta.WitAi.Json
 
         public override void Serialize(System.IO.BinaryWriter aWriter)
         {
-            aWriter.Write((byte) JSONBinaryTag.Array);
+            aWriter.Write((byte)JSONBinaryTag.Array);
             aWriter.Write(m_List.Count);
             for (int i = 0; i < m_List.Count; i++)
             {
@@ -1026,7 +1025,7 @@ namespace Meta.WitAi.Json
 
         public override void Serialize(System.IO.BinaryWriter aWriter)
         {
-            aWriter.Write((byte) JSONBinaryTag.Class);
+            aWriter.Write((byte)JSONBinaryTag.Class);
             aWriter.Write(m_Dict.Count);
             foreach (string K in m_Dict.Keys)
             {
@@ -1089,7 +1088,7 @@ namespace Meta.WitAi.Json
             };
             if (tmp.m_Data == this.m_Data)
             {
-                aWriter.Write((byte) JSONBinaryTag.IntValue);
+                aWriter.Write((byte)JSONBinaryTag.IntValue);
                 aWriter.Write(AsInt);
                 return;
             }
@@ -1097,7 +1096,7 @@ namespace Meta.WitAi.Json
             tmp.AsFloat = AsFloat;
             if (tmp.m_Data == this.m_Data)
             {
-                aWriter.Write((byte) JSONBinaryTag.FloatValue);
+                aWriter.Write((byte)JSONBinaryTag.FloatValue);
                 aWriter.Write(AsFloat);
                 return;
             }
@@ -1105,7 +1104,7 @@ namespace Meta.WitAi.Json
             tmp.AsDouble = AsDouble;
             if (tmp.m_Data == this.m_Data)
             {
-                aWriter.Write((byte) JSONBinaryTag.DoubleValue);
+                aWriter.Write((byte)JSONBinaryTag.DoubleValue);
                 aWriter.Write(AsDouble);
                 return;
             }
@@ -1113,12 +1112,12 @@ namespace Meta.WitAi.Json
             tmp.AsBool = AsBool;
             if (tmp.m_Data == this.m_Data)
             {
-                aWriter.Write((byte) JSONBinaryTag.BoolValue);
+                aWriter.Write((byte)JSONBinaryTag.BoolValue);
                 aWriter.Write(AsBool);
                 return;
             }
 
-            aWriter.Write((byte) JSONBinaryTag.Value);
+            aWriter.Write((byte)JSONBinaryTag.Value);
             aWriter.Write(m_Data);
         }
     } // End of JSONData

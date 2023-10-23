@@ -6,12 +6,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
-using System.Reflection;
 using Lib.Conduit.Editor;
 using Meta.Conduit;
-using UnityEngine;
+using System;
+using System.Reflection;
 using UnityEditor;
+using UnityEngine;
 
 namespace Meta.WitAi.Windows
 {
@@ -36,7 +36,7 @@ namespace Meta.WitAi.Windows
         internal static readonly ManifestLoader ManifestLoader = new ManifestLoader();
         // Used to map type names to their source code
         internal static readonly SourceCodeMapper CodeMapper = new SourceCodeMapper();
-        
+
         // Remove padding
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
@@ -109,7 +109,7 @@ namespace Meta.WitAi.Windows
         // Called per line
         protected virtual void OnDrawLabelInline(SerializedProperty property)
         {
-            
+
         }
 
         // Override pre fields
@@ -204,7 +204,7 @@ namespace Meta.WitAi.Windows
             GUILayout.EndHorizontal();
         }
         // Layout property field
-        protected virtual void LayoutPropertyField(FieldInfo subfield, SerializedProperty subfieldProperty,  GUIContent labelContent, bool canEdit)
+        protected virtual void LayoutPropertyField(FieldInfo subfield, SerializedProperty subfieldProperty, GUIContent labelContent, bool canEdit)
         {
             // If can edit or not array default layout
             if (canEdit || !subfield.FieldType.IsArray || subfieldProperty.arraySize <= 0)

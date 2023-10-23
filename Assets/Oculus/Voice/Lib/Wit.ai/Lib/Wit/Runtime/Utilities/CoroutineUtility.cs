@@ -6,9 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using UnityEngine;
 using System.Collections;
 using System.Linq;
+using UnityEngine;
 
 namespace Meta.WitAi
 {

@@ -18,8 +18,8 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 [CustomEditor(typeof(OVRManager))]
 public class OVRManagerEditor : Editor

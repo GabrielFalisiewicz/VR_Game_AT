@@ -6,9 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System.Text.RegularExpressions;
 using Meta.WitAi.Json;
 using Meta.WitAi.Utilities;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 namespace Meta.WitAi.CallbackHandlers
@@ -33,7 +33,7 @@ namespace Meta.WitAi.CallbackHandlers
             }
             return "";
         }
-        protected override void OnResponseInvalid(WitResponseNode response, string error){}
+        protected override void OnResponseInvalid(WitResponseNode response, string error) { }
         protected override void OnResponseSuccess(WitResponseNode response)
         {
             var text = response["text"].Value;

@@ -20,7 +20,6 @@
 
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace Oculus.Interaction
 {
@@ -61,29 +60,29 @@ namespace Oculus.Interaction
                     return false;
                 }
 
-                switch(_logicOperator)
+                switch (_logicOperator)
                 {
                     case ActiveStateGroupLogicOperator.AND:
-                        foreach(IActiveState activeState in ActiveStates)
+                        foreach (IActiveState activeState in ActiveStates)
                         {
-                            if(!activeState.Active) return false;
+                            if (!activeState.Active) return false;
                         }
                         return true;
 
                     case ActiveStateGroupLogicOperator.OR:
-                        foreach(IActiveState activeState in ActiveStates)
+                        foreach (IActiveState activeState in ActiveStates)
                         {
-                            if(activeState.Active) return true;
+                            if (activeState.Active) return true;
                         }
                         return false;
 
                     case ActiveStateGroupLogicOperator.XOR:
                         bool foundActive = false;
-                        foreach(IActiveState activeState in ActiveStates)
+                        foreach (IActiveState activeState in ActiveStates)
                         {
-                            if(activeState.Active)
+                            if (activeState.Active)
                             {
-                                if(foundActive) return false;
+                                if (foundActive) return false;
                                 foundActive = true;
                             }
                         }

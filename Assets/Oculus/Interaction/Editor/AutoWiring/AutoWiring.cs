@@ -34,9 +34,9 @@ namespace Oculus.Interaction.Editor
             UnityObjectAddedBroadcaster.WhenComponentAdded += (component) =>
             {
                 MonoBehaviour monoBehaviour = component as MonoBehaviour;
-                if(monoBehaviour == null) return;
+                if (monoBehaviour == null) return;
 
-                if(!_configs.TryGetValue(component.GetType(), out ComponentWiringStrategyConfig[] configs))
+                if (!_configs.TryGetValue(component.GetType(), out ComponentWiringStrategyConfig[] configs))
                 {
                     return;
                 }
@@ -82,7 +82,7 @@ namespace Oculus.Interaction.Editor
             var interfaceAttribute = field.GetCustomAttribute<InterfaceAttribute>();
             var wirableTypes = interfaceAttribute != null ?
                 interfaceAttribute.Types :
-                new[] {field.FieldType};
+                new[] { field.FieldType };
 
             if (wirableTypes != null)
             {

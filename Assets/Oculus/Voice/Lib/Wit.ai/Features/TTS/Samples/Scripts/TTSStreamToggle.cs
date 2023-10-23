@@ -6,9 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.TTS.Integrations;
 using UnityEngine;
 using UnityEngine.UI;
-using Meta.WitAi.TTS.Integrations;
 
 namespace Meta.WitAi.TTS.Samples
 {

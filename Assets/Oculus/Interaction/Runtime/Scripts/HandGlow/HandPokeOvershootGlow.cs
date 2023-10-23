@@ -115,7 +115,7 @@ namespace Oculus.Interaction
             _block.SetFloat(_glowParameterID, 1.0f - Mathf.Clamp01(normalizedDistance));
             _block.SetInt(_generateGlowID, 1);
             _block.SetColor(_glowColorID, _glowColor);
-            _block.SetInt(_glowTypeID, (int) _glowType);
+            _block.SetInt(_glowTypeID, (int)_glowType);
             _block.SetVector(_glowPositionID, wristPosition);
             _block.SetFloat(_glowMaxLengthID, glowDistance);
         }

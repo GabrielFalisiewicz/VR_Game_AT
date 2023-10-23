@@ -6,10 +6,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using Meta.Conduit;
-using Meta.WitAi.Json;
 using Meta.WitAi.Data.Intents;
+using Meta.WitAi.Json;
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 

@@ -20,7 +20,6 @@
 
 using System.Collections.Generic;
 using System.Diagnostics;
-using UnityEngine.Assertions;
 
 public abstract class OVRProjectSetupTelemetryEvent
 {

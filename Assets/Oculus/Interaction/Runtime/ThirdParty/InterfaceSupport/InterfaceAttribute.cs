@@ -10,8 +10,8 @@ ANY KIND, either express or implied. See the License for the specific language g
 permissions and limitations under the License.
 ************************************************************************************/
 
-using UnityEngine;
 using System;
+using UnityEngine;
 
 namespace Oculus.Interaction
 {
@@ -40,7 +40,7 @@ namespace Oculus.Interaction
             for (int i = 0; i < types.Length; i++)
             {
                 Debug.Assert(types[i].IsInterface, $"{types[i].Name} needs to be an interface.");
-                Types[i+1] = types[i];
+                Types[i + 1] = types[i];
             }
         }
 

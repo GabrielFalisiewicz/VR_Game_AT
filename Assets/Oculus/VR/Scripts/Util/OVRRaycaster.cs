@@ -19,13 +19,10 @@
  */
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 /// <summary>
 /// Extension of GraphicRaycaster to support ray casting with world space rays instead of just screen-space

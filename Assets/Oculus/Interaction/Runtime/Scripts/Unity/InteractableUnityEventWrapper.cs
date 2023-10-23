@@ -19,7 +19,6 @@
  */
 
 using UnityEngine;
-using UnityEngine.Assertions;
 using UnityEngine.Events;
 
 namespace Oculus.Interaction

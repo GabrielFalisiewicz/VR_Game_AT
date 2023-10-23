@@ -1,10 +1,7 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor.UI;
 using UnityEditor;
+using UnityEditor.UI;
 
 [CustomEditor(typeof(MediaPlayerImage), true)]
 public class MediaPlayerImageEditor : ImageEditor

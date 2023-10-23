@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem; // Dodaj using do namespace Input System
+using UnityEngine.SceneManagement;
 
 public class ResetScene : MonoBehaviour
 {

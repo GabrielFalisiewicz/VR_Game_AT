@@ -19,18 +19,18 @@
 // THE SOFTWARE.
 // Source: https://github.com/adrenak/unimic/blob/master/Assets/UniMic/Runtime/Mic.cs
 
-using System;
-using UnityEngine;
 using Meta.WitAi.Data;
 using Meta.WitAi.Interfaces;
+using System;
+using UnityEngine;
 
 namespace Meta.WitAi.Lib
 {
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
     public class WebGlMic : MonoBehaviour, IAudioInputSource
-    #else
+#else
     public class Mic : MonoBehaviour, IAudioInputSource
-    #endif
+#endif
     {
 #pragma warning disable 0067
         public event Action OnStartRecording;
@@ -64,7 +64,7 @@ namespace Meta.WitAi.Lib
         private string[] MicrophoneGetDevices()
         {
             VLog.E("Direct microphone use is not currently supported in WebGL.");
-            return new string[] {};
+            return new string[] { };
         }
 
         private int MicrophoneGetPosition(string device)

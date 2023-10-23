@@ -19,9 +19,7 @@
  */
 
 using System;
-using UnityEngine.Assertions;
 using UnityEngine;
-using Oculus.Interaction;
 
 namespace Oculus.Interaction
 {

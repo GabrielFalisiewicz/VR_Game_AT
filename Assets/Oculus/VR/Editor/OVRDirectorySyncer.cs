@@ -18,12 +18,12 @@
  * limitations under the License.
  */
 
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System;
 
 public class DirectorySyncer
 {

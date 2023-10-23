@@ -116,7 +116,7 @@ public class OVRVirtualKeyboardHandInputHandler : OVRVirtualKeyboard.OVRVirtualK
         {
             if (limitingReady)
             {
-                lastGivenWristRootPose =  new OVRPlugin.Posef()
+                lastGivenWristRootPose = new OVRPlugin.Posef()
                 {
                     Position = wristRoot.Transform.position.ToFlippedZVector3f(),
                     Orientation = wristRoot.Transform.rotation.ToFlippedZQuatf(),

@@ -23,7 +23,6 @@
 #endif
 
 using UnityEngine;
-using System.Collections;
 
 #if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN || UNITY_ANDROID
 

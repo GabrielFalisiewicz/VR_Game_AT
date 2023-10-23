@@ -18,9 +18,9 @@
  * limitations under the License.
  */
 
-using UnityEngine;
-using UnityEditor;
 using System.Diagnostics;
+using UnityEditor;
+using UnityEngine;
 
 public static class OVREditorUtil
 {

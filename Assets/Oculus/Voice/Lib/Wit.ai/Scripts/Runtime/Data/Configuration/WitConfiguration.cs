@@ -10,7 +10,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Meta.WitAi.Configuration;
-using Meta.WitAi;
 using Meta.WitAi.Data.Info;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -69,7 +68,8 @@ namespace Meta.WitAi.Data.Configuration
         /// <summary>
         /// The assemblies that we want to exclude from Conduit.
         /// </summary>
-        [SerializeField] public List<string> excludedAssemblies = new List<string>
+        [SerializeField]
+        public List<string> excludedAssemblies = new List<string>
         {
             "Oculus.Voice.Demo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "Meta.WitAi.Samples, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -85,17 +85,17 @@ namespace Meta.WitAi.Data.Configuration
         {
             get
             {
-                #if UNITY_EDITOR
+#if UNITY_EDITOR
                 if (string.IsNullOrEmpty(_manifestLocalPath))
                 {
                     _manifestLocalPath = $"ConduitManifest-{Guid.NewGuid()}.json";
                     SaveConfiguration();
                 }
-                #endif
+#endif
                 return _manifestLocalPath;
             }
         }
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         /// <summary>
         /// Returns manifest full editor path
         /// </summary>
@@ -111,7 +111,7 @@ namespace Meta.WitAi.Data.Configuration
             }
             return string.Empty;
         }
-        #endif
+#endif
 
         /// <summary>
         /// Reset all data
@@ -150,13 +150,13 @@ namespace Meta.WitAi.Data.Configuration
         /// </summary>
         public string GetConfigurationId()
         {
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             // Ensure configuration id is generated
             if (string.IsNullOrEmpty(_configurationId))
             {
                 _configurationId = Guid.NewGuid().ToString();
             }
-            #endif
+#endif
             // Return configuration id
             return _configurationId;
         }
@@ -190,7 +190,7 @@ namespace Meta.WitAi.Data.Configuration
         {
             return _clientAccessToken;
         }
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         /// <summary>
         /// Editor only setter
         /// </summary>
@@ -220,13 +220,13 @@ namespace Meta.WitAi.Data.Configuration
         private void SaveConfiguration()
         {
             EditorUtility.SetDirty(this);
-            #if UNITY_2021_3_OR_NEWER
+#if UNITY_2021_3_OR_NEWER
             AssetDatabase.SaveAssetIfDirty(this);
-            #else
+#else
             AssetDatabase.SaveAssets();
-            #endif
+#endif
         }
-        #endif
+#endif
         #endregion
     }
 }

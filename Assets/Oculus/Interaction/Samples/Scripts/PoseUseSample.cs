@@ -21,7 +21,6 @@
 using Oculus.Interaction.Input;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace Oculus.Interaction.Samples
 {

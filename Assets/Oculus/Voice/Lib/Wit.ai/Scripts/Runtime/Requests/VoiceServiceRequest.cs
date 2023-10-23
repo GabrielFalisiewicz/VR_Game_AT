@@ -6,10 +6,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using Meta.Voice;
 using Meta.WitAi.Configuration;
 using Meta.WitAi.Json;
+using System;
 
 namespace Meta.WitAi.Requests
 {
@@ -23,7 +23,7 @@ namespace Meta.WitAi.Requests
         /// <param name="newInputType">The request input type (text/audio) to be used</param>
         /// <param name="newOptions">The request parameters to be used</param>
         /// <param name="newEvents">The request events to be called throughout it's lifecycle</param>
-        protected VoiceServiceRequest(NLPRequestInputType newInputType, WitRequestOptions newOptions, VoiceServiceRequestEvents newEvents) : base(newInputType, newOptions, newEvents) {}
+        protected VoiceServiceRequest(NLPRequestInputType newInputType, WitRequestOptions newOptions, VoiceServiceRequestEvents newEvents) : base(newInputType, newOptions, newEvents) { }
 
         /// <summary>
         /// The status code returned from the last request

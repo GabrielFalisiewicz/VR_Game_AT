@@ -18,8 +18,8 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace Oculus.Interaction.Editor
 {

@@ -1,7 +1,5 @@
-using System.Collections;
-using UnityEngine.SceneManagement;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ResetSceneButton : MonoBehaviour
 {

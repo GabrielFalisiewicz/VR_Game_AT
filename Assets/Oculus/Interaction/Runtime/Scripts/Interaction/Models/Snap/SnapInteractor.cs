@@ -123,7 +123,7 @@ namespace Oculus.Interaction
                 if (_defaultInteractable != null)
                 {
                     SetComputeCandidateOverride(() => _defaultInteractable, true);
-                    SetComputeShouldSelectOverride(()=>true, true);
+                    SetComputeShouldSelectOverride(() => true, true);
                 }
             }
         }

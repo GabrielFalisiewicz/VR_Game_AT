@@ -20,7 +20,6 @@
 
 using UnityEditor;
 using UnityEditor.SceneManagement;
-using UnityEngine;
 
 [CustomEditor(typeof(OVRSkeleton))]
 public class OVRSkeletonEditor : Editor

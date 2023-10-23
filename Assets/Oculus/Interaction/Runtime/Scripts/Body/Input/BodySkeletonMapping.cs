@@ -18,10 +18,10 @@
  * limitations under the License.
  */
 
+using Oculus.Interaction.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.Assertions;
-using Oculus.Interaction.Collections;
 
 namespace Oculus.Interaction.Body.Input
 {

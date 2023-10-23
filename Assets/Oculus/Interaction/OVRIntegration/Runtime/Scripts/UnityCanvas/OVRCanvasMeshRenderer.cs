@@ -21,9 +21,8 @@
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Profiling;
-
-using OverlayType = OVROverlay.OverlayType;
 using OverlayShape = OVROverlay.OverlayShape;
+using OverlayType = OVROverlay.OverlayType;
 
 namespace Oculus.Interaction.UnityCanvas
 {

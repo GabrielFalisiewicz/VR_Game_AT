@@ -18,10 +18,7 @@
  * limitations under the License.
  */
 
-using System;
 using UnityEngine;
-using UnityEngine.Assertions;
-using UnityEngine.Serialization;
 
 namespace Oculus.Interaction
 {
@@ -35,7 +32,7 @@ namespace Oculus.Interaction
 
         protected virtual void Awake()
         {
-            ActiveState = _activeState as IActiveState;;
+            ActiveState = _activeState as IActiveState; ;
         }
 
         protected virtual void Start()

@@ -18,11 +18,11 @@
  * limitations under the License.
  */
 
-using UnityEngine;
-using UnityEditor;
-using Oculus.Interaction.Body.PoseDetection;
 using Oculus.Interaction.Body.Input;
+using Oculus.Interaction.Body.PoseDetection;
 using System.IO;
+using UnityEditor;
+using UnityEngine;
 
 namespace Oculus.Interaction.Body.Editor
 {

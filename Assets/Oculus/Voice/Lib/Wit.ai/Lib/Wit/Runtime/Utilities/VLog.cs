@@ -7,15 +7,15 @@
  */
 
 using System;
-using System.Text;
 using System.Diagnostics;
+using System.Text;
 using UnityEngine;
 
 namespace Meta.WitAi
 {
     public static class VLog
     {
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         /// <summary>
         /// Ignores logs in editor if less than log level (Error = 0, Warning = 2, Log = 3)
         /// </summary>
@@ -23,7 +23,7 @@ namespace Meta.WitAi
         {
             get
             {
-                if (_editorLogLevel == (LogType) (-1))
+                if (_editorLogLevel == (LogType)(-1))
                 {
                     string editorLogLevel = UnityEditor.EditorPrefs.GetString(EDITOR_LOG_LEVEL_KEY, EDITOR_LOG_LEVEL_DEFAULT.ToString());
                     if (!Enum.TryParse(editorLogLevel, out _editorLogLevel))
@@ -47,7 +47,7 @@ namespace Meta.WitAi
         /// Hides all errors from the console
         /// </summary>
         public static bool SuppressErrors { get; set; } = false;
-        #endif
+#endif
 
         /// <summary>
         /// Event for appending custom data to a log before logging to console
@@ -87,9 +87,9 @@ namespace Meta.WitAi
         /// <param name="category"></param>
         private static void Log(LogType logType, string logCategory, object log)
         {
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             // Skip logs with higher log type then global log level
-            if ((int) logType > (int)EditorLogLevel)
+            if ((int)logType > (int)EditorLogLevel)
             {
                 return;
             }
@@ -98,7 +98,7 @@ namespace Meta.WitAi
             {
                 return;
             }
-            #endif
+#endif
 
             // Use calling category if null
             string category = logCategory;
@@ -110,13 +110,13 @@ namespace Meta.WitAi
             // String builder
             StringBuilder result = new StringBuilder();
 
-            #if !UNITY_EDITOR && !UNITY_ANDROID
+#if !UNITY_EDITOR && !UNITY_ANDROID
             {
                 // Start with datetime if not done so automatically
                 DateTime now = DateTime.Now;
                 result.Append($"[{now.ToShortDateString()} {now.ToShortTimeString()}] ");
             }
-            #endif
+#endif
 
             // Insert log type
             int start = result.Length;
@@ -176,14 +176,14 @@ namespace Meta.WitAi
         /// <returns>Assembly name</returns>
         private static void WrapWithCallingLink(StringBuilder builder, int startIndex)
         {
-            #if UNITY_EDITOR && UNITY_2021_2_OR_NEWER
+#if UNITY_EDITOR && UNITY_2021_2_OR_NEWER
             StackTrace stackTrace = new StackTrace(true);
             StackFrame stackFrame = stackTrace.GetFrame(3);
             string callingFileName = stackFrame.GetFileName().Replace('\\', '/');
             int callingFileLine = stackFrame.GetFileLineNumber();
             builder.Insert(startIndex, $"<a href=\"{callingFileName}\" line=\"{callingFileLine}\">");
             builder.Append("</a>");
-            #endif
+#endif
         }
 
         /// <summary>
@@ -191,7 +191,7 @@ namespace Meta.WitAi
         /// </summary>
         private static void WrapWithLogColor(StringBuilder builder, int startIndex, LogType logType)
         {
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             string hex;
             switch (logType)
             {
@@ -207,7 +207,7 @@ namespace Meta.WitAi
             }
             builder.Insert(startIndex, $"<color=#{hex}>");
             builder.Append("</color>");
-            #endif
+#endif
         }
     }
 }

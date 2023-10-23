@@ -18,15 +18,13 @@
  * limitations under the License.
  */
 
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using Oculus.Interaction.Grab;
 using Oculus.Interaction.GrabAPI;
 using Oculus.Interaction.Input;
 using System;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Assertions;
-using UnityEngine.Serialization;
 
 namespace Oculus.Interaction
 {
@@ -321,7 +319,7 @@ namespace Oculus.Interaction
                 block.SetFloat(_fingersGlowIDs[i], Mathf.Clamp01(_glowStregth[i]));
             }
 
-            block.SetInt(_glowTypeID, (int) _glowType);
+            block.SetInt(_glowTypeID, (int)_glowType);
         }
 
         private void UpdateFingerGlowStrength(int fingerIndex, float strength)

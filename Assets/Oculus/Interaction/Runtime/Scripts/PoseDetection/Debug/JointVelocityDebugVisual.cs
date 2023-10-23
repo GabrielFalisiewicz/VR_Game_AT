@@ -18,10 +18,8 @@
  * limitations under the License.
  */
 
-using System;
-using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.Assertions;
+using UnityEngine;
 
 namespace Oculus.Interaction.PoseDetection.Debug
 {

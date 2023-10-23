@@ -18,12 +18,10 @@
  * limitations under the License.
  */
 
-using System;
-using Meta.WitAi;
 using Meta.WitAi.Configuration;
 using Meta.WitAi.Data;
-using Meta.WitAi.Data.Configuration;
 using Meta.WitAi.Windows;
+using System;
 using UnityEditor;
 using UnityEngine;
 

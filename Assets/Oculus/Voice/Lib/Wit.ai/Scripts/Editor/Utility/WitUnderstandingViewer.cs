@@ -6,14 +6,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
-using System.Collections.Generic;
-using System.IO;
 using Meta.WitAi.CallbackHandlers;
 using Meta.WitAi.Configuration;
 using Meta.WitAi.Data;
 using Meta.WitAi.Json;
 using Meta.WitAi.Requests;
+using System;
+using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -140,7 +140,7 @@ namespace Meta.WitAi.Windows
                 _hamburgerButton.imagePosition = ImagePosition.ImageOnly;
             }
 
-            var value = EditorGUILayout.Popup(-1, new string[] {"Save", "Copy to Clipboard"}, _hamburgerButton, GUILayout.Width(24));
+            var value = EditorGUILayout.Popup(-1, new string[] { "Save", "Copy to Clipboard" }, _hamburgerButton, GUILayout.Width(24));
             if (-1 != value)
             {
                 if (value == 0)
@@ -399,7 +399,7 @@ namespace Meta.WitAi.Windows
         {
             if (null == witResponseNode?.AsObject) return;
 
-            if(string.IsNullOrEmpty(path)) DrawNode(witResponseNode["text"], "text", path);
+            if (string.IsNullOrEmpty(path)) DrawNode(witResponseNode["text"], "text", path);
 
             var names = witResponseNode.AsObject.ChildNodeNames;
             Array.Sort(names);
@@ -521,7 +521,7 @@ namespace Meta.WitAi.Windows
                     var handler = mvhs[i];
                     menu.AddItem(
                         new GUIContent($"Add {name} matcher to {Selection.activeGameObject.name}/Handler {(i + 1)}"),
-                        false, (h) => AddNewEventHandlerPath((WitResponseMatcher) h, path), handler);
+                        false, (h) => AddNewEventHandlerPath((WitResponseMatcher)h, path), handler);
                 }
             }
             else if (mvhs.Length == 1)
@@ -529,7 +529,7 @@ namespace Meta.WitAi.Windows
                 var handler = mvhs[0];
                 menu.AddItem(
                     new GUIContent($"Add {name} matcher to {Selection.activeGameObject.name}'s Response Matcher"),
-                    false, (h) => AddNewEventHandlerPath((WitResponseMatcher) h, path), handler);
+                    false, (h) => AddNewEventHandlerPath((WitResponseMatcher)h, path), handler);
             }
         }
 

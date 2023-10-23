@@ -6,7 +6,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using Meta.WitAi.Json;
 using UnityEngine.Events;
 
@@ -32,7 +31,7 @@ namespace Meta.Voice
         /// </summary>
         /// <param name="newOptions">The request parameters to be used</param>
         /// <param name="newEvents">The request events to be called throughout it's lifecycle</param>
-        protected NLPAudioRequest(TOptions newOptions, TEvents newEvents) : base(newOptions, newEvents) {}
+        protected NLPAudioRequest(TOptions newOptions, TEvents newEvents) : base(newOptions, newEvents) { }
 
         /// <summary>
         /// Set response data early if possible

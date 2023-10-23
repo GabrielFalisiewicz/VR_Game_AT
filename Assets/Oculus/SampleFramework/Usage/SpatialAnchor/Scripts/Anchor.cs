@@ -1,11 +1,11 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
 using System.Collections;
-using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 /// <summary>
 /// Specific functionality for spawned anchors

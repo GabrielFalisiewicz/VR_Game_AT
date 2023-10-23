@@ -6,9 +6,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Meta.Conduit;
 using Meta.Voice;
 using Meta.WitAi.Configuration;
@@ -20,6 +17,9 @@ using Meta.WitAi.Events.UnityEventListeners;
 using Meta.WitAi.Interfaces;
 using Meta.WitAi.Json;
 using Meta.WitAi.Requests;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Meta.WitAi
@@ -56,7 +56,8 @@ namespace Meta.WitAi
         /// This field should not be accessed outside the Wit-Unity library. If you need access
         /// to events you should be using the VoiceService.VoiceEvents property instead.
         /// </summary>
-        [Tooltip("Events that will fire before, during and after an activation")] [SerializeField]
+        [Tooltip("Events that will fire before, during and after an activation")]
+        [SerializeField]
         protected VoiceEvents events = new VoiceEvents();
 
         ///<summary>
@@ -591,7 +592,7 @@ namespace Meta.WitAi
                     }
                     if (parameters.Length == 1)
                     {
-                        registeredMethod.method.Invoke(obj, new object[] {response});
+                        registeredMethod.method.Invoke(obj, new object[] { response });
                     }
                 }
             }

@@ -19,10 +19,7 @@
  */
 
 using Oculus.Interaction.Input;
-using System;
 using UnityEngine;
-using UnityEngine.Assertions;
-using UnityEngine.Serialization;
 
 namespace Oculus.Interaction
 {

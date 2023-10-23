@@ -6,10 +6,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.Data.Info;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Meta.WitAi.Data.Info;
 
 namespace Meta.Conduit
 {
@@ -60,12 +60,12 @@ namespace Meta.Conduit
         /// <returns>The Wit entity info object.</returns>
         public WitEntityInfo GetAsInfo()
         {
-            var keywords = new WitEntityKeywordInfo [Values.Count];
+            var keywords = new WitEntityKeywordInfo[Values.Count];
             for (var i = 0; i < Values.Count; ++i)
             {
                 keywords[i] = Values[i].GetAsInfo();
             }
-            
+
             return new WitEntityInfo()
             {
                 name = Name,

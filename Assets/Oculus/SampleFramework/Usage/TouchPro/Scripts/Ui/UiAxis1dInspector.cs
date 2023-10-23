@@ -1,8 +1,8 @@
 ﻿// (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class UiAxis1dInspector : MonoBehaviour
 {

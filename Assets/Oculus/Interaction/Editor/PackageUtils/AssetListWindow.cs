@@ -18,11 +18,10 @@
  * limitations under the License.
  */
 
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
 using System;
-
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
 using Object = UnityEngine.Object;
 
 namespace Oculus.Interaction.Editor

@@ -20,10 +20,8 @@
 
 #if UNITY_EDITOR
 
-using UnityEngine;
 using UnityEditor;
-using System.Collections.Generic;
-using Assets.OVR.Scripts;
+using UnityEngine;
 
 public class OVRProfilerDeprecated : EditorWindow
 {

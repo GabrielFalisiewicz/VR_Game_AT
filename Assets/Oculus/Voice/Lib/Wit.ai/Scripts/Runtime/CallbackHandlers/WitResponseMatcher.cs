@@ -6,11 +6,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+using Meta.WitAi.Data;
+using Meta.WitAi.Json;
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using Meta.WitAi.Data;
-using Meta.WitAi.Json;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -54,7 +54,7 @@ namespace Meta.WitAi.CallbackHandlers
             return string.Empty;
         }
         // Ignore for mismatched intent
-        protected override void OnResponseInvalid(WitResponseNode response, string error) {}
+        protected override void OnResponseInvalid(WitResponseNode response, string error) { }
         // Handle valid callback
         protected override void OnResponseSuccess(WitResponseNode response)
         {

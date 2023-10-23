@@ -18,12 +18,9 @@
  * limitations under the License.
  */
 
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Assertions;
-using Oculus.Interaction.Throw;
-using System;
 using Oculus.Interaction.Grab;
+using Oculus.Interaction.Throw;
+using UnityEngine;
 
 namespace Oculus.Interaction
 {

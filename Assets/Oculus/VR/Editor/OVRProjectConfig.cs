@@ -18,12 +18,12 @@
  * limitations under the License.
  */
 
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
-using System.IO;
-using System;
 using Oculus.VR.Editor;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using UnityEditor;
+using UnityEngine;
 using UnityEngine.Serialization;
 
 [System.Serializable]

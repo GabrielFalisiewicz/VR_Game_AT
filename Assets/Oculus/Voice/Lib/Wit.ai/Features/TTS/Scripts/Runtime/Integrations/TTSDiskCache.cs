@@ -6,17 +6,15 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
-using System.IO;
-using System.Collections.Generic;
-using UnityEngine;
+using Meta.WitAi.Requests;
 using Meta.WitAi.TTS.Data;
 using Meta.WitAi.TTS.Events;
 using Meta.WitAi.TTS.Interfaces;
-using Meta.WitAi.TTS.Utilities;
 using Meta.WitAi.Utilities;
-using Meta.WitAi;
-using Meta.WitAi.Requests;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
 
 namespace Meta.WitAi.TTS.Integrations
 {

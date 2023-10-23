@@ -6,9 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
-using Meta.WitAi;
 using Meta.WitAi.Data.Configuration;
+using System;
 
 namespace Meta.WitAi.Configuration
 {

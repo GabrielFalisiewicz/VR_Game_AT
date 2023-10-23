@@ -19,8 +19,8 @@
  */
 
 using UnityEditor;
-using UnityEngine;
 using UnityEditor.IMGUI.Controls;
+using UnityEngine;
 
 namespace Oculus.Interaction.Editor
 {

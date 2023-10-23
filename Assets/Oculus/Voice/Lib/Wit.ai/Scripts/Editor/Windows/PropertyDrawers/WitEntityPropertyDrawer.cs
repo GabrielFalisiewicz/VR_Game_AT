@@ -6,10 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using UnityEditor;
-using System.Reflection;
 using Meta.WitAi.Data.Configuration;
-using UnityEngine;
+using System.Reflection;
+using UnityEditor;
 
 namespace Meta.WitAi.Windows
 {
@@ -21,21 +20,21 @@ namespace Meta.WitAi.Windows
             // Determine by ids
             switch (key)
             {
-                    case LocalizedTitleKey:
-                        string title = GetFieldStringValue(property, "name");
-                        if (!string.IsNullOrEmpty(title))
-                        {
-                            return title;
-                        }
-                        break;
-                    case "id":
-                        return WitTexts.Texts.ConfigurationEntitiesIdLabel;
-                    case "lookups":
-                        return WitTexts.Texts.ConfigurationEntitiesLookupsLabel;
-                    case "roles":
-                        return WitTexts.Texts.ConfigurationEntitiesRolesLabel;
-                    case "keywords":
-                        return WitTexts.Texts.ConfigurationEntitiesKeywordsLabel;
+                case LocalizedTitleKey:
+                    string title = GetFieldStringValue(property, "name");
+                    if (!string.IsNullOrEmpty(title))
+                    {
+                        return title;
+                    }
+                    break;
+                case "id":
+                    return WitTexts.Texts.ConfigurationEntitiesIdLabel;
+                case "lookups":
+                    return WitTexts.Texts.ConfigurationEntitiesLookupsLabel;
+                case "roles":
+                    return WitTexts.Texts.ConfigurationEntitiesRolesLabel;
+                case "keywords":
+                    return WitTexts.Texts.ConfigurationEntitiesKeywordsLabel;
             }
 
             // Default to base
@@ -59,7 +58,7 @@ namespace Meta.WitAi.Windows
             {
                 return;
             }
-            
+
             var assemblyWalker = WitConfigurationEditor.AssemblyWalker;
             if (assemblyWalker == null)
             {
@@ -78,7 +77,7 @@ namespace Meta.WitAi.Windows
                     VLog.W($"Failed to local source code for {entityName}");
                     return;
                 }
-                
+
                 UnityEditorInternal.InternalEditorUtility.OpenFileAtLineExternal(sourceCodeFile, 1);
             }
         }

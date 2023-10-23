@@ -20,7 +20,6 @@
 
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Assertions;
 
 namespace Oculus.Interaction.Samples
 {

@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using Meta.WitAi.Json;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 

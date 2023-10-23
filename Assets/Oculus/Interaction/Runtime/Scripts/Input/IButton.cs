@@ -18,8 +18,6 @@
  * limitations under the License.
  */
 
-using UnityEngine;
-
 namespace Oculus.Interaction.Input
 {
     public interface IButton

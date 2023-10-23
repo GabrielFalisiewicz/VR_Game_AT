@@ -18,7 +18,6 @@
  * limitations under the License.
  */
 
-using UnityEngine.Assertions;
 using UnityEngine;
 
 namespace Oculus.Interaction.Surfaces
@@ -73,10 +72,10 @@ namespace Oculus.Interaction.Surfaces
         {
             get
             {
-                float maxScale = Mathf.Max(Transform.lossyScale.x, 
+                float maxScale = Mathf.Max(Transform.lossyScale.x,
                     Mathf.Max(Transform.lossyScale.y, Transform.lossyScale.z));
                 float maxSize = maxScale * (Height + Radius);
-                return new Bounds(Transform.position, 
+                return new Bounds(Transform.position,
                     new Vector3(maxSize, maxSize, maxSize));
             }
         }

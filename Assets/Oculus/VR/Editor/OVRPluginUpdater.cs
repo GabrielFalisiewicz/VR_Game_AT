@@ -28,16 +28,13 @@
 #define REQUIRES_XR_SDK
 #endif
 
-using UnityEngine;
-using UnityEditor;
-using UnityEditor.Callbacks;
+using Oculus.VR.Editor;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.IO;
 using System.Diagnostics;
-using Oculus.VR.Editor;
+using System.IO;
+using UnityEditor;
+using UnityEngine;
 
 [InitializeOnLoad]
 public class OVRPluginUpdater : IOVRPluginInfoSupplier

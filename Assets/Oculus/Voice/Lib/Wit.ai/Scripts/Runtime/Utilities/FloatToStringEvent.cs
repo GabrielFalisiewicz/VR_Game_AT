@@ -31,5 +31,5 @@ namespace Meta.WitAi.Utilities
     }
 
     [Serializable]
-    public class StringEvent : UnityEvent<string> {}
+    public class StringEvent : UnityEvent<string> { }
 }

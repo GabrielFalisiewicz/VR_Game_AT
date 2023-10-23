@@ -12,8 +12,6 @@ using System.Collections.Generic;
 #if DEBUG_SAMPLE
 using System.IO;
 #endif
-using System.Linq;
-using System.Net;
 using Meta.Voice;
 using Meta.WitAi.Configuration;
 using Meta.WitAi.Data;
@@ -477,9 +475,9 @@ namespace Meta.WitAi
                     (buffer, offset, length) =>
                     {
                         _recordingRequest.Write(buffer, offset, length);
-                        #if DEBUG_SAMPLE
+#if DEBUG_SAMPLE
                         sampleFile?.Write(buffer, offset, length);
-                        #endif
+#endif
                     },
                     (buffer, offset, length) => VoiceEvents?.OnByteDataSent?.Invoke(buffer, offset, length),
                     (buffer, offset, length) =>
@@ -722,7 +720,7 @@ namespace Meta.WitAi
             }
 
             // Remove from transmit list, missing if aborted
-            if ( _transmitRequests.Contains(request))
+            if (_transmitRequests.Contains(request))
             {
                 _transmitRequests.Remove(request);
             }

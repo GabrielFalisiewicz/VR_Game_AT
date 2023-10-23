@@ -38,9 +38,9 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using UnityEngine;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
+using UnityEngine;
 
 // Internal C# wrapper for OVRPlugin.
 
@@ -705,7 +705,9 @@ public static partial class OVRPlugin
 
         public static readonly TextureRectMatrixf zero = new TextureRectMatrixf
         {
-            leftRect = new Rect(0, 0, 1, 1), rightRect = new Rect(0, 0, 1, 1), leftScaleBias = new Vector4(1, 1, 0, 0),
+            leftRect = new Rect(0, 0, 1, 1),
+            rightRect = new Rect(0, 0, 1, 1),
+            leftScaleBias = new Vector4(1, 1, 0, 0),
             rightScaleBias = new Vector4(1, 1, 0, 0)
         };
 
@@ -7747,7 +7749,7 @@ public static partial class OVRPlugin
     }
 
 
-// Virtual keyboard calls
+    // Virtual keyboard calls
 
     public static Result CreateVirtualKeyboard(VirtualKeyboardCreateInfo createInfo)
     {

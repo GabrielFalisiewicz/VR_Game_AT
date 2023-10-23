@@ -6,8 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System.Reflection;
 using Meta.WitAi.Utilities;
+using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
@@ -31,7 +31,7 @@ namespace Meta.WitAi.Drawers
             var parentProperty = property.serializedObject.FindProperty(parentPropertyName);
 
             var targetObject = property.serializedObject.targetObject;
-            if(targetObject != _targetObject)
+            if (targetObject != _targetObject)
             {
                 _targetObject = targetObject;
                 var targetObjectClassType = targetObject.GetType();
@@ -50,7 +50,7 @@ namespace Meta.WitAi.Drawers
             _max = attr.DefaultMax;
             if (null != _rangePropertyField)
             {
-                var range = (Vector2) _rangePropertyField.GetValue(_parentValue);
+                var range = (Vector2)_rangePropertyField.GetValue(_parentValue);
                 _min = range.x;
                 _max = range.y;
             }

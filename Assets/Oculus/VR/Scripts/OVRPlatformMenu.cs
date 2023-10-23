@@ -18,9 +18,8 @@
  * limitations under the License.
  */
 
-using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 /// Shows the Oculus plaform UI.

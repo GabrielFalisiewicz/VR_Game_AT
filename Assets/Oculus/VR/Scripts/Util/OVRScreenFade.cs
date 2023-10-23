@@ -18,8 +18,8 @@
  * limitations under the License.
  */
 
-using UnityEngine;
 using System.Collections; // required for Coroutines
+using UnityEngine;
 
 /// <summary>
 /// Fades the screen from black after a new scene is loaded. Fade can also be controlled mid-scene using SetUIFade and SetFadeLevel

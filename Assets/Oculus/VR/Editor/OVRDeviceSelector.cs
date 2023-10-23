@@ -19,10 +19,6 @@
  */
 
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
 #if PRIORITIZE_OCULUS_XR_SETTINGS
 using Unity.XR.Oculus;
 #endif

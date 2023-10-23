@@ -1,7 +1,5 @@
 // (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -62,7 +60,7 @@ public class MoviePlayerSampleControls : MonoBehaviour
 
     void OnPlayPauseClicked()
     {
-        switch(_state)
+        switch (_state)
         {
             case PlaybackState.Paused:
                 Player.Play();
@@ -93,7 +91,7 @@ public class MoviePlayerSampleControls : MonoBehaviour
 
     void OnFastForwardClicked()
     {
-        switch(_state)
+        switch (_state)
         {
             case PlaybackState.FastForwarding:
                 Player.SetPlaybackSpeed(1);
@@ -149,7 +147,7 @@ public class MoviePlayerSampleControls : MonoBehaviour
 
         // only seek if the position changed more than 200ms
         if (Mathf.Abs(newPos - Player.PlaybackPosition) > 200)
-        {            
+        {
             Seek(newPos);
         }
     }
@@ -163,7 +161,7 @@ public class MoviePlayerSampleControls : MonoBehaviour
 
     private void Update()
     {
-        if(OVRInput.Get(OVRInput.Button.One) || OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) || OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
+        if (OVRInput.Get(OVRInput.Button.One) || OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) || OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
             _lastButtonTime = Time.time;
             if (!_isVisible)

@@ -19,7 +19,6 @@
  */
 
 using UnityEditor;
-using UnityEngine;
 
 [InitializeOnLoad]
 public static class OVREditorShutdown

@@ -21,7 +21,7 @@ namespace Meta.WitAi.TTS.Interfaces
         /// <returns>If false is returned, the calling speak operation will be cancelled</returns>
         bool OnPreprocessTTS(TTSSpeaker speaker, ref string text);
     }
-    
+
     public interface ISpeakerTextPostprocessor
     {
         /// <summary>

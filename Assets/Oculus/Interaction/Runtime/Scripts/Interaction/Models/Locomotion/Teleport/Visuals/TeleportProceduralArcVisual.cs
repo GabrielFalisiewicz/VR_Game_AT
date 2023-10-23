@@ -223,7 +223,7 @@ namespace Oculus.Interaction.Locomotion
             for (int i = 1; i < ArcPointsCount; i++)
             {
                 float segmentLenght = (_arcPoints[i - 1].position - _arcPoints[i].position).magnitude;
-                _arcPoints[i].relativeLength = _arcPoints[i-1].relativeLength + (segmentLenght / totalDistance);
+                _arcPoints[i].relativeLength = _arcPoints[i - 1].relativeLength + (segmentLenght / totalDistance);
             }
         }
 

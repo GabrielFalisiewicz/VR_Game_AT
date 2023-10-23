@@ -6,9 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using Meta.WitAi.TTS.Data;
 using Meta.WitAi.TTS.Events;
+using System;
 
 namespace Meta.WitAi.TTS.Interfaces
 {

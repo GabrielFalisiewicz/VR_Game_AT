@@ -6,9 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using UnityEditor;
 using System.Reflection;
-using Meta.WitAi;
+using UnityEditor;
 
 namespace Meta.WitAi.Windows
 {

@@ -6,9 +6,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using System.Text;
-using System.Collections.Generic;
-using System.Web;
 using Meta.Voice;
 using Meta.WitAi.Configuration;
 using Meta.WitAi.Data.Configuration;
@@ -16,6 +13,7 @@ using Meta.WitAi.Data.Entities;
 using Meta.WitAi.Interfaces;
 using Meta.WitAi.Json;
 using Meta.WitAi.Requests;
+using System.Collections.Generic;
 
 namespace Meta.WitAi
 {
@@ -90,7 +88,7 @@ namespace Meta.WitAi
             {
                 var keyword = existingKeywords[i].AsObject;
                 var key = keyword["keyword"].Value;
-                if(!map.ContainsKey(key))
+                if (!map.ContainsKey(key))
                 {
                     map[key] = keyword;
                 }

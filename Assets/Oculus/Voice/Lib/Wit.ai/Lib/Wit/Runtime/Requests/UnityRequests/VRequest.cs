@@ -10,16 +10,15 @@
 #define FAKE_JAR_LOAD
 #endif
 
+using Meta.WitAi.Json;
 using System;
-using System.IO;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Networking;
-using Meta.WitAi.Json;
 
 namespace Meta.WitAi.Requests
 {
