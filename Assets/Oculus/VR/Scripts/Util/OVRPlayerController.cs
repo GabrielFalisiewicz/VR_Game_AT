@@ -151,9 +151,7 @@ public class OVRPlayerController : MonoBehaviour
     protected CharacterController Controller = null;
     protected OVRCameraRig CameraRig = null;
 
-#pragma warning disable CS0414 // Pole „OVRPlayerController.MoveScale” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private float MoveScale = 1.0f;
-#pragma warning restore CS0414 // Pole „OVRPlayerController.MoveScale” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private Vector3 MoveThrottle = Vector3.zero;
     private float FallSpeed = 0.0f;
     private OVRPose? InitialPose;
@@ -165,16 +163,10 @@ public class OVRPlayerController : MonoBehaviour
     private bool SkipMouseRotation = true;
 
     private bool HaltUpdateMovement = false;
-#pragma warning disable CS0414 // Pole „OVRPlayerController.prevHatLeft” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private bool prevHatLeft = false;
-#pragma warning restore CS0414 // Pole „OVRPlayerController.prevHatLeft” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
-#pragma warning disable CS0414 // Pole „OVRPlayerController.prevHatRight” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private bool prevHatRight = false;
-#pragma warning restore CS0414 // Pole „OVRPlayerController.prevHatRight” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private float SimulationRate = 60f;
-#pragma warning disable CS0414 // Pole „OVRPlayerController.buttonRotation” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private float buttonRotation = 0f;
-#pragma warning restore CS0414 // Pole „OVRPlayerController.buttonRotation” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
 
     // Set to true when a snap turn has occurred, code requires one frame of centered thumbstick to enable another snap turn.
     private bool ReadyToSnapTurn;

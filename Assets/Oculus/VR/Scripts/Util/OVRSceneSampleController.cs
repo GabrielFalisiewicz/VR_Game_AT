@@ -52,9 +52,7 @@ public class OVRSceneSampleController : MonoBehaviour
     public string layerName = "Default";
 
     // Vision mode on/off
-#pragma warning disable CS0414 // Pole „OVRSceneSampleController.visionMode” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private bool visionMode = true;
-#pragma warning restore CS0414 // Pole „OVRSceneSampleController.visionMode” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
 
     // We want to hold onto GridCube, for potential sharing
     // of the menu RenderTarget

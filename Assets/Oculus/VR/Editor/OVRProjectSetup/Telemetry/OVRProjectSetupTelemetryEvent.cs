@@ -71,9 +71,7 @@ public abstract class OVRProjectSetupTelemetryEvent
     private EventTypes _type;
     private Dictionary<AnnotationTypes, string> _annotations;
     private ResultTypes _result = ResultTypes.Success;
-#pragma warning disable CS0414 // Pole „OVRProjectSetupTelemetryEvent._sent” jest przypisane, lecz jego wartość nie jest nigdy używana
     private bool _sent;
-#pragma warning restore CS0414 // Pole „OVRProjectSetupTelemetryEvent._sent” jest przypisane, lecz jego wartość nie jest nigdy używana
 
     protected OVRProjectSetupTelemetryEvent()
     {

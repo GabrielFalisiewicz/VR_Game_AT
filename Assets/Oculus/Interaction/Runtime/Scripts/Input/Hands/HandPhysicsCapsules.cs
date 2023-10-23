@@ -61,9 +61,7 @@ namespace Oculus.Interaction.Input
             }
         }
 
-#pragma warning disable CS0649 // Do pola „HandPhysicsCapsules._rootTransform” nigdy nie jest przypisywana wartoœæ i bêdzie ono mieæ zawsze wartoœæ domyœln¹ null
         private Transform _rootTransform;
-#pragma warning restore CS0649 // Do pola „HandPhysicsCapsules._rootTransform” nigdy nie jest przypisywana wartoœæ i bêdzie ono mieæ zawsze wartoœæ domyœln¹ null
         public Transform RootTransform => _rootTransform;
 
         private List<BoneCapsule> _capsules;
