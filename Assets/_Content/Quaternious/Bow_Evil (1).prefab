@@ -1197,7 +1197,7 @@ MonoBehaviour:
     type: 3}
   arrowSpawnPoint: {fileID: 2594565042755830646}
   arrowMaxSpeed: 10
-  bowReleaseAudioSource: {fileID: 0}
+  bowReleaseAudioSource: {fileID: 7313731630524774211}
 --- !u!1001 &7580245840031053621
 PrefabInstance:
   m_ObjectHideFlags: 0

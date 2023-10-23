@@ -11,12 +11,20 @@ public class GetPoint : MonoBehaviour
 
     void Start()
     {
+        
+        if (coins == null)
+        {
+            Debug.LogError("Nie przypisano komponentu TMP_Text w inspektorze.");
+            return;
+        }
         coins = GetComponent<TMP_Text>();
         UpdatePointsText();
+
     }
 
     public void resetscore()
     {
+
         score = 0;
         attemptsCounter.CurrentAttempts = attemptsCounter.maxAttempts;
         UpdatePointsText();
@@ -37,6 +45,11 @@ public class GetPoint : MonoBehaviour
     {
         if (attemptsCounter.DecreaseAttempt())
         {
+            if (attemptsCounter == null)
+            {
+                Debug.LogError("Nie przypisano skryptu AttemptsCounter w inspektorze.");
+                return;
+            }
             score += amount;
             UpdatePointsText();
 
