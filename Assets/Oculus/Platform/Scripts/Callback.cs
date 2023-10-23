@@ -88,7 +88,9 @@ namespace Oculus.Platform
         private static Dictionary<ulong, Request> requestIDsToRequests = new Dictionary<ulong, Request>();
         private static Dictionary<Message.MessageType, RequestCallback> notificationCallbacks = new Dictionary<Message.MessageType, RequestCallback>();
 
+#pragma warning disable CS0414 // Pole „Callback.hasRegisteredRoomInviteNotificationHandler” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
         private static bool hasRegisteredRoomInviteNotificationHandler = false;
+#pragma warning restore CS0414 // Pole „Callback.hasRegisteredRoomInviteNotificationHandler” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
         private static List<Message> pendingRoomInviteNotifications = new List<Message>();
         private static void FlushRoomInviteNotificationQueue()
         {

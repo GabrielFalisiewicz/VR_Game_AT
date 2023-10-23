@@ -171,7 +171,9 @@ public class OVRVirtualKeyboard : MonoBehaviour
     private bool isKeyboardCreated_ = false;
 
     private UInt64 keyboardSpace_;
+#pragma warning disable CS0414 // Pole „OVRVirtualKeyboard.scale_” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private float scale_ = 1.0f;
+#pragma warning restore CS0414 // Pole „OVRVirtualKeyboard.scale_” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
 
     private Dictionary<ulong, List<Material>> virtualKeyboardTextures_ = new Dictionary<ulong, List<Material>>();
     private OVRGLTFScene virtualKeyboardScene_;

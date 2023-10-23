@@ -45,15 +45,23 @@ public class OVRHeadsetEmulator : MonoBehaviour
     const float MOUSE_SCALE_HEIGHT = 1.0f;
     const float MAX_ROLL = 85.0f;
 
+#pragma warning disable CS0414 // Pole „OVRHeadsetEmulator.lastFrameEmulationActivated” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private bool lastFrameEmulationActivated = false;
+#pragma warning restore CS0414 // Pole „OVRHeadsetEmulator.lastFrameEmulationActivated” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
 
     private Vector3 recordedHeadPoseRelativeOffsetTranslation;
     private Vector3 recordedHeadPoseRelativeOffsetRotation;
 
+#pragma warning disable CS0414 // Pole „OVRHeadsetEmulator.hasSentEvent” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private bool hasSentEvent = false;
+#pragma warning restore CS0414 // Pole „OVRHeadsetEmulator.hasSentEvent” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
+#pragma warning disable CS0414 // Pole „OVRHeadsetEmulator.emulatorHasInitialized” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private bool emulatorHasInitialized = false;
+#pragma warning restore CS0414 // Pole „OVRHeadsetEmulator.emulatorHasInitialized” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
 
+#pragma warning disable CS0414 // Pole „OVRHeadsetEmulator.previousCursorLockMode” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private CursorLockMode previousCursorLockMode = CursorLockMode.None;
+#pragma warning restore CS0414 // Pole „OVRHeadsetEmulator.previousCursorLockMode” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
 
     // Use this for initialization
     void Start()

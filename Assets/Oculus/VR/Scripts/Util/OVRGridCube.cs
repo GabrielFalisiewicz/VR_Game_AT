@@ -33,7 +33,9 @@ public class OVRGridCube : MonoBehaviour
 
     private GameObject CubeGrid = null;
 
+#pragma warning disable CS0414 // Pole „OVRGridCube.CubeGridOn” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private bool CubeGridOn = false;
+#pragma warning restore CS0414 // Pole „OVRGridCube.CubeGridOn” jest przypisane, lecz jego wartoœæ nie jest nigdy u¿ywana
     private bool CubeSwitchColorOld = false;
     private bool CubeSwitchColor = false;
 

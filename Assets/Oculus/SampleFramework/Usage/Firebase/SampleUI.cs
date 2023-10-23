@@ -4,7 +4,9 @@ using UnityEngine.UI;
 public class SampleUI : MonoBehaviour
 {
     RectTransform collectionButton;
+#pragma warning disable CS0649 // Do pola „SampleUI.inputText” nigdy nie jest przypisywana wartoœæ i bêdzie ono mieæ zawsze wartoœæ domyœln¹ null
     RectTransform inputText;
+#pragma warning restore CS0649 // Do pola „SampleUI.inputText” nigdy nie jest przypisywana wartoœæ i bêdzie ono mieæ zawsze wartoœæ domyœln¹ null
     RectTransform valueText;
     bool inMenu;
 
